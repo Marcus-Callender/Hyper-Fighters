@@ -8,8 +8,20 @@ void printInstructions()
 {
 	system("cls");
 	std::cout << "Attacks beat throws.\n";
+	std::cout << "Moves 1 & 2 will always be attacks.\n";
 	std::cout << "Throws beat defending.\n";
+	std::cout << "Move 3 will always be an Throw.\n";
 	std::cout << "Defending beats Attacks.\n";
+	std::cout << "Moves 4 & 5 will always be a defensive action.\n\n";
+
+	std::cout << "When you're focus reaches 100 you will be able to use you're hyper move.\n";
+	std::cout << "You can increse you're focus by sucsesfuly blocking and parying attacks.\n";
+	std::cout << "You will also gain some focus by dealing and receving damage.\n\n";
+
+	std::cout << "Rush, Lance & Fenrir use an attacking hyper.\n";
+	std::cout << "Tarja & Dash have a hyper throws.\n";
+	std::cout << "Wave has a defencive, counter hyper.\n";
+	std::cout << "DSPD_017 activates a powered up state for a unique hyper.\n";
 	std::cout << "\nPress any key to continue\n>";
 	_getch();
 }
