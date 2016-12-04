@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Charicters">
+      <UniqueIdentifier>{895bb102-2f6a-436f-9a4c-b2a6b1b981fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Charicters">
+      <UniqueIdentifier>{878e32dd-414d-44a2-9c36-4a905491d321}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Legacy">
+      <UniqueIdentifier>{43eb3c96-5a3d-410c-9ea0-197d0f03e0f1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Legacy">
+      <UniqueIdentifier>{681c5983-6ca9-4be9-9a44-150ecbddf9bf}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="FighterData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FighterBase.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Refere.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Move.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Controler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Enums.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AI_Controler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerControler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Status.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Action.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Rush.h">
+      <Filter>Header Files\Charicters</Filter>
+    </ClInclude>
+    <ClInclude Include="Lance.h">
+      <Filter>Header Files\Charicters</Filter>
+    </ClInclude>
+    <ClInclude Include="Wave.h">
+      <Filter>Header Files\Charicters</Filter>
+    </ClInclude>
+    <ClInclude Include="DSPD_017.h">
+      <Filter>Header Files\Charicters</Filter>
+    </ClInclude>
+    <ClInclude Include="Tarja.h">
+      <Filter>Header Files\Charicters</Filter>
+    </ClInclude>
+    <ClInclude Include="Dash.h">
+      <Filter>Header Files\Charicters</Filter>
+    </ClInclude>
+    <ClInclude Include="Fenrir.h">
+      <Filter>Header Files\Charicters</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity.h">
+      <Filter>Header Files\Legacy</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="FighterData.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FighterBase.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Refere.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Move.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Controler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AI_Controler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerControler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Status.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Action.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Rush.cpp">
+      <Filter>Source Files\Charicters</Filter>
+    </ClCompile>
+    <ClCompile Include="Lance.cpp">
+      <Filter>Source Files\Charicters</Filter>
+    </ClCompile>
+    <ClCompile Include="Wave.cpp">
+      <Filter>Source Files\Charicters</Filter>
+    </ClCompile>
+    <ClCompile Include="DSPD_017.cpp">
+      <Filter>Source Files\Charicters</Filter>
+    </ClCompile>
+    <ClCompile Include="Tarja.cpp">
+      <Filter>Source Files\Charicters</Filter>
+    </ClCompile>
+    <ClCompile Include="Dash.cpp">
+      <Filter>Source Files\Charicters</Filter>
+    </ClCompile>
+    <ClCompile Include="Fenrir.cpp">
+      <Filter>Source Files\Charicters</Filter>
+    </ClCompile>
+    <ClCompile Include="Entity.cpp">
+      <Filter>Source Files\Legacy</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

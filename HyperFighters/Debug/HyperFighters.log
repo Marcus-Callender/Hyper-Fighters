@@ -1,0 +1,10 @@
+﻿  Wave.cpp
+  Lance.cpp
+c:\users\user\desktop\memorystick\code\hyperfighters\hyperfighters\lance.cpp(53): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\user\desktop\memorystick\code\hyperfighters\hyperfighters\lance.cpp(54): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  Fenrir.cpp
+  Dash.cpp
+  Generating Code...
+c:\users\user\desktop\memorystick\code\hyperfighters\hyperfighters\dash.cpp(107): warning C4172: returning address of local variable or temporary: toReturn
+  HyperFighters.vcxproj -> C:\Users\User\Desktop\MemoryStick\code\HyperFighters\Debug\HyperFighters.exe
+  HyperFighters.vcxproj -> C:\Users\User\Desktop\MemoryStick\code\HyperFighters\Debug\HyperFighters.pdb (Full PDB)
