@@ -58,6 +58,16 @@ int C_FighterData::getFocus()
 	return m_focus;
 }
 
+int C_FighterData::getPreviousHp()
+{
+	return m_previousHP;
+}
+
+int C_FighterData::getPreviousFocus()
+{
+	return m_previousFocus;
+}
+
 int& C_FighterData::getFocusRef()
 {
 	return m_focus;

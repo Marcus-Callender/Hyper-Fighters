@@ -17,7 +17,9 @@ public:
 	void gainHp(int ammount);
 	virtual void rest();
 	int getHp();
+	int getPreviousHp();
 	int getFocus();
+	int getPreviousFocus();
 	int& getFocusRef();
 	virtual void takeDamage(int ammount, bool gainMeter = true);
 	std::string getName();

@@ -14,6 +14,11 @@ C_FighterBase::C_FighterBase(e_controlerType controler)
 	else if (controler == TYPE_AI) {
 		m_pControler = new C_AI_Controler();
 	}
+
+	for (int z = 0; z < 3; z++)
+	{
+		m_pStatuses[z] = nullptr;
+	}
 }
 
 C_FighterBase::~C_FighterBase()
@@ -34,31 +39,31 @@ std::string C_FighterBase::status()
 	statString += ": ";
 	statString += std::to_string(m_pFighterData->getHp());
 
-	/*if (m_hp != m_previousHP)
+	if (m_pFighterData->getHp() != m_pFighterData->getPreviousHp())
 	{
 		statString += "(- ";
-		statString += std::to_string(m_previousHP - m_hp);
+		statString += std::to_string(m_pFighterData->getPreviousHp() - m_pFighterData->getHp());
 		statString += ")";
-	}*/
+	}
 
 	statString += " (";
 	statString += std::to_string(m_pFighterData->getFocus());
 
-	/*if (m_focus != m_previousFocus)
+	if (m_pFighterData->getFocus() != m_pFighterData->getPreviousFocus())
 	{
 		statString += "(+ ";
-		statString += std::to_string(m_focus - m_previousFocus);
+		statString += std::to_string(m_pFighterData->getFocus() - m_pFighterData->getPreviousFocus());
 		statString += ")";
-	}*/
+	}
 
 	statString += "/100)";
 
-	//for (int z = 0; z < 3; z++)
-	//{
-	//	if (m_pStatuses[z] != nullptr) {
-	//		statString += m_pStatuses[z]->giveSymbol();
-	//	}
-	//}
+	for (int z = 0; z < 3; z++)
+	{
+		if (m_pStatuses[z] != nullptr) {
+			statString += m_pStatuses[z]->giveSymbol();
+		}
+	}
 
 	if (m_pFighterData->getKnockedDown())
 	{
@@ -117,9 +122,11 @@ void C_FighterBase::input()
 	m_pCurrentMove = m_pControler->input(m_pMoves);
 }
 
-void C_FighterBase::giveStatus(/*C_Status * pStatus*/)
+void C_FighterBase::giveStatus(C_Status * pStatus)
 {
-	C_Status* pStatus = static_cast<C_Status*>(m_pFighterData->getStatus());
+	m_pFighterData->giveStatus(pStatus);
+
+	/*C_Status* pStatus = static_cast<C_Status*>(m_pFighterData->getStatus());
 
 	if (pStatus != nullptr)
 	{
@@ -144,7 +151,7 @@ void C_FighterBase::giveStatus(/*C_Status * pStatus*/)
 				}
 			}
 		}
-	}
+	}*/
 }
 
 void C_FighterBase::removeStatus(C_Status * pStatus)
@@ -160,17 +167,17 @@ void C_FighterBase::removeStatus(C_Status * pStatus)
 
 void C_FighterBase::rest()
 {
-	giveStatus();
+	//giveStatus();
 
 	m_pFighterData->rest();
 
-	/*for (int z = 0; z < 3; z++)
+	for (int z = 0; z < 3; z++)
 	{
 		if (m_pStatuses[z] != nullptr)
 		{
 			m_pStatuses[z]->effect(m_pFighterData);
 		}
-	}*/
+	}
 }
 
 C_FighterData * C_FighterBase::getFighterData()
