@@ -7,6 +7,7 @@
 void printInstructions()
 {
 	system("cls");
+
 	std::cout << "Attacks beat throws.\n";
 	std::cout << "Moves 1 & 2 will always be attacks.\n";
 	std::cout << "Throws beat defending.\n";
@@ -21,8 +22,10 @@ void printInstructions()
 	std::cout << "Rush, Lance & Fenrir use an attacking hyper.\n";
 	std::cout << "Tarja & Dash have a hyper throws.\n";
 	std::cout << "Wave has a defencive, counter hyper.\n";
-	std::cout << "DSPD_017 activates a powered up state for a unique hyper.\n";
+	std::cout << "DSPD_017 activates a powered up state for a unique type of hyper.\n";
+
 	std::cout << "\nPress any key to continue\n>";
+
 	_getch();
 }
 

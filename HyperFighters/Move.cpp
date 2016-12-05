@@ -1,6 +1,7 @@
 #include "Move.h"
 
 #include <iostream>
+#include <math.h>
 
 C_Move::C_Move()
 {
@@ -204,7 +205,7 @@ eResult C_block::use(C_FighterData * vs, C_Move * vsMove)
 
 void C_block::win(C_FighterData * vs, C_Move* vsMove)
 {
-	m_pMe->gainFocus((int)(vsMove->getDamage() * m_FocusGain));
+	m_pMe->gainFocus((int) ceil(vsMove->getDamage() * m_FocusGain));
 }
 
 void C_block::lose(C_FighterData * vs, C_Move* vsMove)

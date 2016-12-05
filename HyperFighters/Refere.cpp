@@ -138,8 +138,8 @@ void C_Refere::evaluate()
 
 	if (resOne > resTwo)
 	{
-		m_pFighters[0]->win(m_pFighters[1]->getFighterData(), m_pFighters[0]->getCurrentMove());
-		m_pFighters[1]->lose(m_pFighters[0]->getFighterData(), m_pFighters[1]->getCurrentMove());
+		m_pFighters[0]->win(m_pFighters[1]->getFighterData(), m_pFighters[1]->getCurrentMove());
+		m_pFighters[1]->lose(m_pFighters[0]->getFighterData(), m_pFighters[0]->getCurrentMove());
 
 		m_pFighters[0]->giveResult(AI_WIN, m_pFighters[1]->getCurrentMove()->getType());
 		m_pFighters[1]->giveResult(AI_LOSE, m_pFighters[0]->getCurrentMove()->getType());
@@ -156,13 +156,13 @@ void C_Refere::evaluate()
 	{
 		if ((resOne == LOSE) || (resOne == SP_LOSE))
 		{
-			m_pFighters[0]->lose(m_pFighters[1]->getFighterData(), m_pFighters[0]->getCurrentMove());
-			m_pFighters[1]->lose(m_pFighters[0]->getFighterData(), m_pFighters[1]->getCurrentMove());
+			m_pFighters[0]->lose(m_pFighters[1]->getFighterData(), m_pFighters[1]->getCurrentMove());
+			m_pFighters[1]->lose(m_pFighters[0]->getFighterData(), m_pFighters[0]->getCurrentMove());
 		}
 		else if ((resOne == WIN) || (resOne == SP_WIN))
 		{
-			m_pFighters[0]->win(m_pFighters[1]->getFighterData(), m_pFighters[0]->getCurrentMove());
-			m_pFighters[1]->win(m_pFighters[0]->getFighterData(), m_pFighters[1]->getCurrentMove());
+			m_pFighters[0]->win(m_pFighters[1]->getFighterData(), m_pFighters[1]->getCurrentMove());
+			m_pFighters[1]->win(m_pFighters[0]->getFighterData(), m_pFighters[0]->getCurrentMove());
 		}
 
 		m_pFighters[0]->giveResult(AI_DRAW, m_pFighters[1]->getCurrentMove()->getType());
