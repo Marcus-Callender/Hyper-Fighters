@@ -123,18 +123,46 @@ void C_FighterData::gainFocus(int ammount)
 	}
 }
 
-void C_FighterData::giveStatus(void * pStatus)
+void C_FighterData::giveStatus(C_Status * pStatus)
 {
-	m_pStatus = pStatus;
+	bool alreadyHaveStatus = false;
+
+	for (int z = 0; z < 3; z++)
+	{
+		if (m_pStatuses[z] == pStatus)
+		{
+			alreadyHaveStatus = true;
+			break;
+		}
+	}
+
+	if (!alreadyHaveStatus)
+	{
+		for (int z = 0; z < 3; z++)
+		{
+			if (m_pStatuses[z] == nullptr)
+			{
+				m_pStatuses[z] = pStatus;
+				break;
+			}
+		}
+	}
 }
 
-void * C_FighterData::getStatus()
+C_Status * C_FighterData::getStatus(int z)
 {
-	void* toReturn = m_pStatus;
+	/*void* toReturn = m_pStatus;
 
 	m_pStatus = nullptr;
 
-	return toReturn;
+	return toReturn;*/
+
+	if (z >= 0 && z < 3)
+	{
+		return m_pStatuses[z];
+	}
+
+	return nullptr;
 }
 
 void C_FighterData::reciveCustomData(void *)

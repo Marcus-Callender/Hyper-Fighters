@@ -51,9 +51,10 @@ C_DashData::C_DashData()
 	m_previousHP = m_hp;
 	m_previousFocus = m_focus;
 
-	/*for (int z = 0; z < 3; z++) {
-	m_pStatus[z] = nullptr;
-	}*/
+	/**/
+	for (int z = 0; z < 3; z++) {
+		m_pStatuses[z] = nullptr;
+	}
 }
 
 void C_DashData::takeDamage(int ammount, bool gainMeter)

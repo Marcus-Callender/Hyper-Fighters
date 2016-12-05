@@ -3,6 +3,8 @@
 
 #include <string>
 
+class C_Status;
+
 class C_FighterData
 {
 public:
@@ -25,8 +27,8 @@ public:
 	virtual void useHyper();
 	void takeFocusDamage(int ammount);
 	virtual void gainFocus(int ammount);
-	void giveStatus(void* pStatus);
-	void* getStatus();
+	void giveStatus(C_Status* pStatus);
+	C_Status* getStatus(int z);
 
 	virtual void reciveCustomData(void* data);
 
@@ -40,7 +42,8 @@ protected:
 	int m_maxFocus;
 	int m_previousFocus;
 	bool m_knockedDown;
-	void* m_pStatus;
+	//void* m_pStatus;
+	C_Status* m_pStatuses[3];
 };
 
 #endif // !__FIGHTER_DATA_H__

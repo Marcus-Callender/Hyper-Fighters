@@ -2,6 +2,7 @@
 
 #include "AI_Controler.h"
 #include "PlayerControler.h"
+#include "Status.h"
 
 #include <iostream>
 
