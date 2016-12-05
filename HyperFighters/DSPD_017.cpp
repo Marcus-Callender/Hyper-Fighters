@@ -70,11 +70,11 @@ C_DSPD_017_Base::C_DSPD_017_Base(e_controlerType controler) : C_FighterBase::C_F
 	m_pMoves[5] = new C_dodge(5, 0.0f, 0.5, "Evade", m_pFighterData);
 
 	m_pOverloadedMoves[0] = new C_ModeOff(0, 1.5f, 0.0, "Vent circuits", m_pFighterData);
-	m_pOverloadedMoves[1] = new C_L_attack(18, 1.0f, 0.0, "Light hit", m_pFighterData);
-	m_pOverloadedMoves[2] = new C_KD_H_attack(25, 2.0f, 0.0, "Heavy hit", m_pFighterData);
-	m_pOverloadedMoves[3] = new C_KD_throw(23, 3.0f, 0.0, "Suplex", m_pFighterData);
-	m_pOverloadedMoves[4] = new C_block(0, 0.0f, 2.0, "Defend", m_pFighterData);
-	m_pOverloadedMoves[5] = new C_dodge(8, 0.0f, 0.0, "Evade", m_pFighterData);
+	m_pOverloadedMoves[1] = new C_L_attack(18, 1.0f, 0.0, "Powered Light hit", m_pFighterData);
+	m_pOverloadedMoves[2] = new C_KD_H_attack(25, 2.0f, 0.0, "Powered Heavy hit", m_pFighterData);
+	m_pOverloadedMoves[3] = new C_KD_throw(23, 3.0f, 0.0, "Powered Suplex", m_pFighterData);
+	m_pOverloadedMoves[4] = new C_block(0, 0.0f, 2.0, "Barier", m_pFighterData);
+	m_pOverloadedMoves[5] = new C_dodge(8, 0.0f, 0.0, "Powered Counter", m_pFighterData);
 
 	m_pCurrentMove = m_pMoves[1];
 }
