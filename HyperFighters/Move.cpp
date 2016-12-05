@@ -76,8 +76,8 @@ eResult C_L_attack::use(C_FighterData * vs, C_Move * vsMove)
 
 void C_L_attack::win(C_FighterData * vs, C_Move* vsMove)
 {
-	vs->takeDamage(m_damage, m_pMe);
-	m_pMe->gainFocus(m_FocusGain);
+	vs->takeDamage(m_damage);
+	m_pMe->gainFocus((int)m_FocusGain);
 }
 
 void C_L_attack::lose(C_FighterData * vs, C_Move* vsMove)
@@ -120,8 +120,8 @@ eResult C_H_attack::use(C_FighterData * vs, C_Move * vsMove)
 
 void C_H_attack::win(C_FighterData * vs, C_Move* vsMove)
 {
-	vs->takeDamage(m_damage, m_pMe);
-	m_pMe->gainFocus(m_FocusGain);
+	vs->takeDamage(m_damage);
+	m_pMe->gainFocus((int)m_FocusGain);
 }
 
 void C_H_attack::lose(C_FighterData * vs, C_Move* vsMove)
@@ -164,7 +164,7 @@ eResult C_throw::use(C_FighterData * vs, C_Move * vsMove)
 
 void C_throw::win(C_FighterData * vs, C_Move* vsMove)
 {
-	vs->takeDamage(m_damage, m_pMe);
+	vs->takeDamage(m_damage);
 	m_pMe->gainFocus((int)m_FocusGain);
 }
 
@@ -240,7 +240,7 @@ eResult C_dodge::use(C_FighterData * vs, C_Move * vsMove)
 
 void C_dodge::win(C_FighterData * vs, C_Move * vsMove)
 {
-	vs->takeDamage(m_damage, m_pMe);
+	vs->takeDamage(m_damage);
 	m_pMe->gainFocus((int)m_FocusGain);
 }
 
@@ -286,7 +286,7 @@ eResult C_parry::use(C_FighterData * vs, C_Move * vsMove)
 void C_parry::win(C_FighterData * vs, C_Move * vsMove)
 {
 	m_pMe->gainFocus((int)(vsMove->getDamage() * m_FocusGain));
-	vs->takeDamage(m_damage, m_pMe);
+	vs->takeDamage(m_damage);
 }
 
 void C_parry::lose(C_FighterData * vs, C_Move * vsMove)
@@ -361,7 +361,7 @@ eResult C_counter::use(C_FighterData * vs, C_Move * vsMove)
 
 void C_counter::win(C_FighterData * vs, C_Move * vsMove)
 {
-	vs->takeDamage(m_damage, m_pMe);
+	vs->takeDamage(m_damage);
 	m_pMe->gainFocus((int)m_FocusGain);
 	vs->knockDown();
 }

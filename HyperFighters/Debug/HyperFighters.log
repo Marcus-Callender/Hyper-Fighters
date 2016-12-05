@@ -1,11 +1,3 @@
 ﻿  Move.cpp
-c:\users\user\desktop\hyper-fighters\hyperfighters\move.cpp(79): warning C4800: 'C_FighterData *': forcing value to bool 'true' or 'false' (performance warning)
-c:\users\user\desktop\hyper-fighters\hyperfighters\move.cpp(80): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-c:\users\user\desktop\hyper-fighters\hyperfighters\move.cpp(123): warning C4800: 'C_FighterData *': forcing value to bool 'true' or 'false' (performance warning)
-c:\users\user\desktop\hyper-fighters\hyperfighters\move.cpp(124): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-c:\users\user\desktop\hyper-fighters\hyperfighters\move.cpp(167): warning C4800: 'C_FighterData *': forcing value to bool 'true' or 'false' (performance warning)
-c:\users\user\desktop\hyper-fighters\hyperfighters\move.cpp(243): warning C4800: 'C_FighterData *': forcing value to bool 'true' or 'false' (performance warning)
-c:\users\user\desktop\hyper-fighters\hyperfighters\move.cpp(289): warning C4800: 'C_FighterData *': forcing value to bool 'true' or 'false' (performance warning)
-c:\users\user\desktop\hyper-fighters\hyperfighters\move.cpp(364): warning C4800: 'C_FighterData *': forcing value to bool 'true' or 'false' (performance warning)
   HyperFighters.vcxproj -> C:\Users\User\Desktop\Hyper-Fighters\Debug\HyperFighters.exe
   HyperFighters.vcxproj -> C:\Users\User\Desktop\Hyper-Fighters\Debug\HyperFighters.pdb (Full PDB)
