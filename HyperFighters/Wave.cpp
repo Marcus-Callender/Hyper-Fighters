@@ -29,7 +29,6 @@ C_WaveData::C_WaveData() : C_FighterData::C_FighterData()
 	m_previousHP = m_hp;
 	m_previousFocus = m_focus;
 
-	/**/
 	for (int z = 0; z < 3; z++) {
 		m_pStatuses[z] = nullptr;
 	}
