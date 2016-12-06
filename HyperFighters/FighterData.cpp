@@ -159,6 +159,11 @@ void C_FighterData::giveStatus(C_Status * pStatus)
 	}
 }
 
+void C_FighterData::removeStatus(int z)
+{
+	m_pStatuses[z] = nullptr;
+}
+
 C_Status * C_FighterData::getStatus(int z)
 {
 	/*void* toReturn = m_pStatus;

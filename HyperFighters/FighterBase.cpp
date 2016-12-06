@@ -75,6 +75,12 @@ std::string C_FighterBase::status()
 
 void C_FighterBase::win(C_FighterData * vs, C_Move* vsMove)
 {
+	if (m_pCurrentMove != m_pMoves[4]) {
+		for (int z = 0; z < 3; z++) {
+			m_pFighterData->removeStatus(z);
+		}
+	}
+
 	m_pCurrentMove->win(vs, vsMove);
 
 	m_pControler->result(WIN, vsMove);

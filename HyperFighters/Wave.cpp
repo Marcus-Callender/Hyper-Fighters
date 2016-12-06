@@ -33,3 +33,9 @@ C_WaveData::C_WaveData() : C_FighterData::C_FighterData()
 		m_pStatuses[z] = nullptr;
 	}
 }
+
+void C_WaveData::takeDamage(int ammount, bool gainMeter)
+{
+	C_FighterData::takeDamage(ammount, gainMeter);
+}
+

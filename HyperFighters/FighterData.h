@@ -30,6 +30,7 @@ public:
 	void takeFocusDamage(int ammount);
 	virtual void gainFocus(int ammount);
 	void giveStatus(C_Status* pStatus);
+	void removeStatus(int z);
 	C_Status* getStatus(int z);
 
 	virtual void reciveCustomData(void* data);
