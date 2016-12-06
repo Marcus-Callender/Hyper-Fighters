@@ -168,6 +168,9 @@ void C_Refere::evaluate()
 		m_pFighters[0]->giveResult(AI_DRAW, m_pFighters[1]->getCurrentMove()->getType());
 		m_pFighters[1]->giveResult(AI_DRAW, m_pFighters[0]->getCurrentMove()->getType());
 	}
+
+	m_pFighters[0]->RunStatus();
+	m_pFighters[1]->RunStatus();
 }
 
 void C_Refere::end()

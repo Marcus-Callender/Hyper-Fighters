@@ -63,33 +63,33 @@ std::string C_LanceBase::status()
 	statString += ": ";
 	statString += std::to_string(m_pFighterData->getHp());
 
-	/*if (m_hp != m_previousHP)
+	if (m_pFighterData->getHp() != m_pFighterData->getPreviousHp())
 	{
-	statString += "(- ";
-	statString += std::to_string(m_previousHP - m_hp);
-	statString += ")";
-	}*/
+		statString += "(- ";
+		statString += std::to_string(m_pFighterData->getPreviousHp() - m_pFighterData->getHp());
+		statString += ")";
+	}
 
 	statString += " (";
 	statString += std::to_string(m_pFighterData->getFocus());
 
-	/*if (m_focus != m_previousFocus)
+	if (m_pFighterData->getFocus() != m_pFighterData->getPreviousFocus())
 	{
-	statString += "(+ ";
-	statString += std::to_string(m_focus - m_previousFocus);
-	statString += ")";
-	}*/
+		statString += "(+ ";
+		statString += std::to_string(m_pFighterData->getFocus() - m_pFighterData->getPreviousFocus());
+		statString += ")";
+	}
 
 	statString += "/100)";
 
 	statString += m_charge->getChargeString();
 
-	//for (int z = 0; z < 3; z++)
-	//{
-	//	if (m_pStatuses[z] != nullptr) {
-	//		statString += m_pStatuses[z]->giveSymbol();
-	//	}
-	//}
+	for (int z = 0; z < 3; z++)
+	{
+		if (m_pStatuses[z] != nullptr) {
+			statString += m_pStatuses[z]->giveSymbol();
+		}
+	}
 
 	if (m_pFighterData->getKnockedDown())
 	{
@@ -121,9 +121,9 @@ C_LanceData::C_LanceData() : C_FighterData::C_FighterData()
 	m_previousHP = m_hp;
 	m_previousFocus = m_focus;
 
-	/*for (int z = 0; z < 3; z++) {
-		m_pStatus[z] = nullptr;
-	}*/
+	for (int z = 0; z < 3; z++) {
+		m_pStatuses[z] = nullptr;
+	}
 }
 
 bool C_LanceData::canUseHyperSkill()

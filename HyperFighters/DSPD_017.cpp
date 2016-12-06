@@ -127,9 +127,9 @@ C_DSPD_017_Data::C_DSPD_017_Data()
 	m_previousHP = m_hp;
 	m_previousFocus = m_focus;
 
-	/*for (int z = 0; z < 3; z++) {
-	m_pStatus[z] = nullptr;
-	}*/
+	for (int z = 0; z < 3; z++) {
+		m_pStatuses[z] = nullptr;
+	}
 }
 
 void C_DSPD_017_Data::takeDamage(int ammount, bool gainMeter)
