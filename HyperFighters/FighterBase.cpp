@@ -170,6 +170,11 @@ void C_FighterBase::rest()
 	//giveStatus();
 
 	m_pFighterData->rest();
+}
+
+void C_FighterBase::RunStatus()
+{
+	SyncStatuses();
 
 	for (int z = 0; z < 3; z++)
 	{
@@ -177,6 +182,13 @@ void C_FighterBase::rest()
 		{
 			m_pStatuses[z]->effect(m_pFighterData);
 		}
+	}
+}
+
+void C_FighterBase::SyncStatuses()
+{
+	for (int z = 0; z < 3; z++) {
+		m_pStatuses[z] = m_pFighterData->getStatus(z);
 	}
 }
 

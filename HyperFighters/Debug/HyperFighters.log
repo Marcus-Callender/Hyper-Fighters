@@ -1,10 +1,15 @@
-﻿  Rush.cpp
+﻿  Refere.cpp
 c:\users\user\desktop\hyper-fighters\hyperfighters\rush.h(22): warning C4305: 'initializing': truncation from 'double' to 'float'
-c:\users\user\desktop\hyper-fighters\hyperfighters\rush.cpp(127): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
-  Lance.cpp
-c:\users\user\desktop\hyper-fighters\hyperfighters\lance.cpp(53): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-c:\users\user\desktop\hyper-fighters\hyperfighters\lance.cpp(54): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
   FighterBase.cpp
   Generating Code...
+  Skipping... (no relevant changes detected)
+  Wave.cpp
+  Tarja.cpp
+  Rush.cpp
+  Main.cpp
+  Lance.cpp
+  Fenrir.cpp
+  Dash.cpp
+  DSPD_017.cpp
   HyperFighters.vcxproj -> C:\Users\User\Desktop\Hyper-Fighters\Debug\HyperFighters.exe
   HyperFighters.vcxproj -> C:\Users\User\Desktop\Hyper-Fighters\Debug\HyperFighters.pdb (Full PDB)

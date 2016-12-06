@@ -27,6 +27,8 @@ public:
 	void giveStatus(C_Status* pStatus);
 	void removeStatus(C_Status* pStatus);
 	void rest();
+	void RunStatus();
+	void SyncStatuses();
 
 	C_Move* getCurrentMove();
 	C_FighterData* getFighterData();
