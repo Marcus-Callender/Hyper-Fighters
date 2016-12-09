@@ -21,6 +21,7 @@ bool C_DSPD_017_Overload::Sustain(int & heat)
 {
 	if (m_overloaded)
 	{
+		// if in overload deducts cost and if no more focus remains returns to normal
 		heat -= m_heatCost;
 
 		if (heat <= 0)
@@ -40,6 +41,7 @@ bool C_DSPD_017_Overload::GetOverloaded()
 
 float C_DSPD_017_Overload::GetDamageMultiplier()
 {
+	// reduces damage taken when in overload
 	if (m_overloaded)
 		return m_overloadedDamage;
 
@@ -93,24 +95,29 @@ void C_DSPD_017_Base::input()
 	{
 		if (m_pOverloadData->GetOverloaded())
 		{
+			// if in overloaded state gives controler overloaded moves to use
 			m_pCurrentMove = m_pControler->input(m_pOverloadedMoves);
 		}
 		else
 		{
+			// if not overloaded gives the controler normal moves to use
 			m_pCurrentMove = m_pControler->input(m_pMoves);
 		}
 	}
 	else
 	{
+		// if overload state has just ended this forces the selected move to be "Vent circuits" 
 		m_pCurrentMove = m_pOverloadedMoves[0];
 	}
 
 	if (m_pCurrentMove == m_pMoves[0])
 	{
+		// if not overloaded and use hyper goes into overload
 		m_pOverloadData->Overload();
 	}
 	else if (m_pCurrentMove == m_pOverloadedMoves[0])
 	{
+		// if in overload and use hyper goes back to normal
 		m_pOverloadData->VentHeat();
 	}
 }
