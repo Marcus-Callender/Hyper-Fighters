@@ -15,6 +15,10 @@
 
 C_Refere::C_Refere()
 {
+	for (int z = 0; z < 2; z++)
+	{
+		m_pFighters[z] = nullptr;
+	}
 }
 
 C_Refere::~C_Refere()

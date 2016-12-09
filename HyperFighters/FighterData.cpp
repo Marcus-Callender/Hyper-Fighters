@@ -137,6 +137,7 @@ void C_FighterData::giveStatus(C_Status * pStatus)
 {
 	bool alreadyHaveStatus = false;
 
+	// checks if the charicter already has the selected status
 	for (int z = 0; z < 3; z++)
 	{
 		if (m_pStatuses[z] == pStatus)
@@ -146,6 +147,7 @@ void C_FighterData::giveStatus(C_Status * pStatus)
 		}
 	}
 
+	// if not assignes it to the first avalable slot in m_pStatuses
 	if (!alreadyHaveStatus)
 	{
 		for (int z = 0; z < 3; z++)

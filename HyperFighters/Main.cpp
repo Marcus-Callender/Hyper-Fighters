@@ -8,11 +8,13 @@ void printInstructions()
 {
 	system("cls");
 
-	std::cout << "Attacks beat throws.\n";
-	std::cout << "Moves 1 & 2 will always be attacks.\n";
-	std::cout << "Throws beat defending.\n";
-	std::cout << "Move 3 will always be an Throw.\n";
-	std::cout << "Defending beats Attacks.\n";
+	std::cout << "Attacks (L) & (H) beat throws.\n";
+	std::cout << "Light and Heavy attacks will react diffrently to certain attacks, \nsuch as parries.\n";
+	std::cout << "Moves 1 & 2 will always be attacks.\n\n";
+	std::cout << "Throws (T) beat defending.\n";
+	std::cout << "Move 3 will always be an Throw.\n\n";
+	std::cout << "Defending (B) & (D) beats Attacks.\n";
+	std::cout << "Blocking will help you gain focus faster, Dodging will counter you're opponent.\n";
 	std::cout << "Moves 4 & 5 will always be a defensive action.\n\n";
 
 	std::cout << "When you're focus reaches 100 you will be able to use you're hyper move.\n";
@@ -33,6 +35,7 @@ void mainMenu(bool &exit, C_Refere* pRefere)
 {
 	bool repeat = false;
 
+	// loops while the player dose not chose Exit on the main menu.
 	do
 	{
 		repeat = false;
@@ -141,12 +144,15 @@ int main()
 
 		bool exit = false;
 
+		// initialize the random algorythem with the current time.
 		srand((unsigned)time(0));
 
 		pRefere = new C_Refere();
 
+		// loops while the player has not selected exit from the main menu
 		while (!exit)
 		{
+			// gives the player the main menu
 			mainMenu(exit, pRefere);
 
 			if (!exit)
@@ -155,14 +161,16 @@ int main()
 
 				charicterSelect(pRefere);
 
+				// has a match between the seected charicters
 				pRefere->Start();
-
-				if (pRefere != nullptr)
-					delete pRefere;
 			}
 		}
+
+		if (pRefere != nullptr)
+			delete pRefere;
 	}
 
+	// checks for meory leaks
 	_CrtDumpMemoryLeaks();
 
 	return 0;

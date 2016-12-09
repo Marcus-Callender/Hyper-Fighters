@@ -118,11 +118,13 @@ void C_RushData::takeDamage(int ammount, bool gainMeter)
 {
 	C_FighterData::takeDamage(ammount, gainMeter);
 
+	// reduces Rushes heat level to 0
 	m_heatLevel->lose();
 }
 
 void C_RushData::gainFocus(int ammount)
 {
+	// focus increses by ammount * 1.(heat level * 2)
 	m_focus += ammount * m_heatLevel->focusMultiplyer();
 }
 
