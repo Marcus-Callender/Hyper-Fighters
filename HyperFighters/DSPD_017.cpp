@@ -62,6 +62,7 @@ C_DSPD_017_Base::C_DSPD_017_Base(e_controlerType controler) : C_FighterBase::C_F
 
 	m_pFighterData->reciveCustomData(m_pOverloadData);
 
+	m_pMoves[0] = new C_ModeOn(0, 0.1f, 0.0, "Overload circuits", m_pFighterData);
 	m_pMoves[1] = new C_L_attack(13, 1.0f, 7.0, "Light hit", m_pFighterData);
 	m_pMoves[2] = new C_H_attack(18, 2.0f, 15.0, "Heavy hit", m_pFighterData);
 	m_pMoves[3] = new C_KD_throw(19, 3.0f, 15.0, "Suplex", m_pFighterData);
