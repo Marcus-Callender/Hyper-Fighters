@@ -1,0 +1,33 @@
+Wave
+Waves light attack gives toxic and her heavy attack gives venom.
+Toxic reduces hosts focus and venom reduces hosts health.
+The effectiveness of toxic and venom will increse the longer they are in use.
+Damaging wave remove these statuses and there effectiveness will be reset.
+
+Rush
+Rush gets heat levels when using sevral sucsesful moves in a row up to a maximum of 5.
+Heat increses the rate at whch rush builds focus and this is reset to 0 when he is hit.
+
+DSPD_017
+DSPD_017 has a hyper that boosts the damage of all its moves while active by gining a powered up state.
+While powered up DSPD_017s focus will be decresed by 20 points a turn.
+If DSPD_017 has no fucus left and is powered up it will be forced to switch back.
+DSPD_017 can switch back at any time by using there hyper while powered up.
+The only way for DSPD_017 to gain focus whie powered up is to block as the rest of its moves will no longer generate focus.
+
+Tarja
+Tarjas hyper grab move has 'light armour' meaing if the opponent uses a light attack.
+Againsed it Tarja will take damage from the move and continue the grab.
+This dose not work againsed heavy attacks.
+
+Dash
+When Dash looses with a move one of his moves will become Lucky.
+This is indicated by >>> (move details) <<<.
+This gives the move more damage and generates more focus on hit.
+
+Fenrir
+No special notes needed (meant to be used for beginers).
+
+Lance
+Lances hyper requires 100 focus and for your last action to be a block.
+This is indicated by '(Charged)' appearing by your focus.

@@ -27,7 +27,9 @@ public:
 	void input();
 
 private:
-	C_Move* m_pLuckyMoves[6];
+	//int m_luckyMove;
+
+	C_Move* m_pLuckyMoves[5];
 	C_DashLuckyMoves* m_pLuckyData;
 };
 

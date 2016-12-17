@@ -1,24 +1,7 @@
-﻿  Wave.cpp
-  FighterData.cpp
-  FighterBase.cpp
+﻿  Dash.cpp
   Generating Code...
-  Compiling...
-  Refere.cpp
-c:\users\user\desktop\hyper-fighters\hyperfighters\rush.h(22): warning C4305: 'initializing': truncation from 'double' to 'float'
-  Generating Code...
+c:\users\user\desktop\hyper-fighters\hyperfighters\dash.cpp(124): warning C4172: returning address of local variable or temporary: toReturn
   Skipping... (no relevant changes detected)
-  Tarja.cpp
-  Status.cpp
-  Rush.cpp
-  PlayerControler.cpp
-  Move.cpp
-  Main.cpp
-  Lance.cpp
-  Fenrir.cpp
-  Dash.cpp
-  DSPD_017.cpp
-  Controler.cpp
-  Action.cpp
-  AI_Controler.cpp
+  Refere.cpp
   HyperFighters.vcxproj -> C:\Users\User\Desktop\Hyper-Fighters\Debug\HyperFighters.exe
   HyperFighters.vcxproj -> C:\Users\User\Desktop\Hyper-Fighters\Debug\HyperFighters.pdb (Full PDB)
