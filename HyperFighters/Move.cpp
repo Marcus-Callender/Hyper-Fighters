@@ -458,7 +458,8 @@ eResult C_ModeOn::use(C_FighterData* vs, C_Move* vsMove)
 	}
 	else
 	{
-		std::cout << m_name << " coulden't overloaded as " << vs->getName() << " attacked them.\n";
+		//std::cout << m_name << " coulden't overloaded as " << vs->getName() << " attacked them.\n";
+		std::cout << m_name << " overloaded before " << vs->getName() << " attacked them.\n";
 		return SP_LOSE;
 	}
 
