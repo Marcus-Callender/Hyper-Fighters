@@ -1,4 +1,4 @@
-﻿  Refere.cpp
-c:\users\user\desktop\hyper-fighters\hyperfighters\rush.h(22): warning C4305: 'initializing': truncation from 'double' to 'float'
+﻿  Dash.cpp
+c:\users\user\desktop\hyper-fighters\hyperfighters\dash.cpp(107): warning C4172: returning address of local variable or temporary: toReturn
   HyperFighters.vcxproj -> C:\Users\User\Desktop\Hyper-Fighters\Debug\HyperFighters.exe
   HyperFighters.vcxproj -> C:\Users\User\Desktop\Hyper-Fighters\Debug\HyperFighters.pdb (Full PDB)

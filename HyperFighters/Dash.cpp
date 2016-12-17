@@ -17,12 +17,12 @@ C_DashBase::C_DashBase(e_controlerType controler) : C_FighterBase::C_FighterBase
 	m_pMoves[4] = new C_block			(0, 0.0f, 2.0, "Block", m_pFighterData);
 	m_pMoves[5] = new C_parry			(9, 0.0f, 2.0, "Light parry", m_pFighterData, L_ATTACK);
 
-	m_pLuckyMoves[0] = nullptr;
-	m_pLuckyMoves[1] = new C_L_attack	(21, 1.0f, 8.0, ">> Quick kick <<", m_pFighterData);
-	m_pLuckyMoves[2] = new C_KD_H_attack(30, 2.0f, 23.0, ">> Strong punch <<", m_pFighterData);
-	m_pLuckyMoves[3] = new C_throw		(21, 3.0f, 30.0, ">> Hurl <<", m_pFighterData);
-	m_pLuckyMoves[4] = new C_block		(0, 0.0f, 3.0, ">> Block <<", m_pFighterData);
-	m_pLuckyMoves[5] = new C_parry		(14, 0.0f, 3.0, ">> Light parry <<", m_pFighterData, L_ATTACK);
+	//m_pLuckyMoves[0] = nullptr;
+	m_pLuckyMoves[0] = new C_L_attack	(21, 1.0f, 8.0, ">> Quick kick <<", m_pFighterData);
+	m_pLuckyMoves[1] = new C_KD_H_attack(30, 2.0f, 23.0, ">> Strong punch <<", m_pFighterData);
+	m_pLuckyMoves[2] = new C_throw		(21, 3.0f, 30.0, ">> Hurl <<", m_pFighterData);
+	m_pLuckyMoves[3] = new C_block		(0, 0.0f, 3.0, ">> Block <<", m_pFighterData);
+	m_pLuckyMoves[4] = new C_parry		(14, 0.0f, 3.0, ">> Light parry <<", m_pFighterData, L_ATTACK);
 
 	m_pCurrentMove = m_pMoves[1];
 }
@@ -80,7 +80,7 @@ void C_DashLuckyMoves::Reset()
 
 void C_DashLuckyMoves::SetLuckyMove()
 {
-	m_luckyMove = (rand() % 5) + 1;
+	m_luckyMove = (rand() % 5);
 }
 
 int C_DashLuckyMoves::GetLuckyMove()
@@ -94,11 +94,11 @@ C_Move ** C_DashLuckyMoves::SetMoves(C_Move ** normal, C_Move ** lucky)
 
 	for (int z = 0; z < 6; z++)
 	{
-		if (z == m_luckyMove)
+		/*if (z == m_luckyMove)
 		{
-			toReturn[z] = lucky[z];
+			toReturn[z] = lucky[z - 1];
 		}
-		else
+		else*/
 		{
 			toReturn[z] = normal[z];
 		}

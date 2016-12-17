@@ -8,10 +8,12 @@
 
 C_FighterBase::C_FighterBase(e_controlerType controler)
 {
-	if (controler == TYPE_PLAYER) {
+	if (controler == TYPE_PLAYER)
+	{
 		m_pControler = new C_PlayerControler();
 	}
-	else if (controler == TYPE_AI) {
+	else if (controler == TYPE_AI)
+	{
 		m_pControler = new C_AI_Controler();
 	}
 
@@ -60,7 +62,8 @@ std::string C_FighterBase::status()
 
 	for (int z = 0; z < 3; z++)
 	{
-		if (m_pStatuses[z] != nullptr) {
+		if (m_pStatuses[z] != nullptr)
+		{
 			statString += m_pStatuses[z]->giveSymbol();
 		}
 	}
@@ -76,9 +79,11 @@ std::string C_FighterBase::status()
 void C_FighterBase::win(C_FighterData * vs, C_Move* vsMove)
 {
 	// If a move was sucsesful in damaging the enemy (move was not a block)
-	if (m_pCurrentMove != m_pMoves[4]) {
+	if (m_pCurrentMove != m_pMoves[4])
+	{
 		//removes all statuses from the player
-		for (int z = 0; z < 3; z++) {
+		for (int z = 0; z < 3; z++)
+		{
 			m_pFighterData->removeStatus(z);
 		}
 	}
@@ -197,7 +202,8 @@ void C_FighterBase::RunStatus()
 
 void C_FighterBase::SyncStatuses()
 {
-	for (int z = 0; z < 3; z++) {
+	for (int z = 0; z < 3; z++)
+	{
 		m_pStatuses[z] = m_pFighterData->getStatus(z);
 	}
 }
