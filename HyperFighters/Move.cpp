@@ -518,17 +518,13 @@ C_heatAttack::~C_heatAttack()
 	m_pHeatLevel = nullptr;
 }
 
-eResult C_heatAttack::use(C_FighterData * vs, C_Move * vsMove)
-{
-	return eResult();
-}
-
 void C_heatAttack::win(C_FighterData * vs, C_Move * vsMove)
 {
+	vs->takeDamage(getDamage());
+	m_pMe->gainFocus((int)m_FocusGain);
 }
 
 int C_heatAttack::getDamage()
 {
-	//return m_damage + m_pHeatLevel->;
-	return 0;
+	return m_damage + (m_pHeatLevel->getHeatLevel() * 5);
 }

@@ -25,6 +25,7 @@ public:
 	void win();
 	void lose();
 	float focusMultiplyer();
+	int getHeatLevel();
 	std::string getHeatString();
 
 	//int getHeatLevel();

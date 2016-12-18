@@ -37,7 +37,7 @@ C_RushBase::C_RushBase(e_controlerType controler) : C_FighterBase::C_FighterBase
 
 	m_pFighterData->reciveCustomData(m_heatLevel);
 
-	m_pMoves[0] = new C_L_attack(30, 0.5f, 12.0, "Reverse meteor cannon", m_pFighterData);
+	m_pMoves[0] = new C_heatAttack(30, 0.5f, 12.0, "Reverse meteor cannon", m_pFighterData, m_heatLevel);
 	m_pMoves[1] = new C_L_attack(15, 1.0f, 8.0, "Light attack", m_pFighterData);
 	m_pMoves[2] = new C_H_attack(23, 2.0f, 13.0, "Heavy attack", m_pFighterData);
 	m_pMoves[3] = new C_KD_throw(25, 3.0f, 18.0, "Throw", m_pFighterData);
@@ -133,6 +133,9 @@ void C_RushData::takeDamage(int ammount, bool gainMeter)
 void C_RushData::gainFocus(int ammount)
 {
 	m_focus += ammount * m_heatLevel->focusMultiplyer();
+
+	if (m_focus > 100)
+		m_focus = 100;
 }
 
 void C_RushData::reciveCustomData(void * data)

@@ -63,6 +63,11 @@ float C_RushHeatLevel::focusMultiplyer()
 	return 1.0f + (m_heatFocusGain * m_heatLevel);
 }
 
+int C_RushHeatLevel::getHeatLevel()
+{
+	return m_heatLevel;
+}
+
 std::string C_RushHeatLevel::getHeatString()
 {
 	return " (heat: " + std::to_string(m_heatLevel) + ")";

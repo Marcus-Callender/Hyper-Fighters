@@ -222,7 +222,7 @@ public:
 	C_heatAttack(int damage, float speed, double focusGain, std::string name, C_FighterData* pMe, C_RushHeatLevel* pHeatLevel);
 	~C_heatAttack();
 
-	eResult use(C_FighterData* vs, C_Move* vsMove);
+	//eResult use(C_FighterData* vs, C_Move* vsMove);
 	void win(C_FighterData* vs, C_Move* vsMove);
 
 	int	getDamage();

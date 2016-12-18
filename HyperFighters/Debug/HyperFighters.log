@@ -1,3 +1,19 @@
-﻿  PlayerControler.cpp
+﻿  Move.cpp
+c:\users\user\desktop\hyper-fighters\hyperfighters\extrafighterdata.h(37): warning C4305: 'initializing': truncation from 'double' to 'float'
+  Generating Code...
+  Skipping... (no relevant changes detected)
+  Wave.cpp
+  Tarja.cpp
+  Rush.cpp
+  Refere.cpp
+  PlayerControler.cpp
+  Main.cpp
+  Lance.cpp
+  FighterBase.cpp
+  Fenrir.cpp
+  Dash.cpp
+  DSPD_017.cpp
+  Controler.cpp
+  AI_Controler.cpp
   HyperFighters.vcxproj -> C:\Users\User\Desktop\Hyper-Fighters\Debug\HyperFighters.exe
   HyperFighters.vcxproj -> C:\Users\User\Desktop\Hyper-Fighters\Debug\HyperFighters.pdb (Full PDB)
