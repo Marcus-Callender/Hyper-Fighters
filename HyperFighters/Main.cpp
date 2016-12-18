@@ -156,10 +156,13 @@ int main()
 				charicterSelect(pRefere);
 
 				pRefere->Start();
-
-				if (pRefere != nullptr)
-					delete pRefere;
 			}
+		}
+
+		if (pRefere != nullptr)
+		{
+			delete pRefere;
+			pRefere = nullptr;
 		}
 	}
 

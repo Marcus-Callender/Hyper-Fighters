@@ -8,10 +8,12 @@
 
 C_FighterBase::C_FighterBase(e_controlerType controler)
 {
-	if (controler == TYPE_PLAYER) {
+	if (controler == TYPE_PLAYER)
+	{
 		m_pControler = new C_PlayerControler();
 	}
-	else if (controler == TYPE_AI) {
+	else if (controler == TYPE_AI)
+	{
 		m_pControler = new C_AI_Controler();
 	}
 
@@ -84,8 +86,10 @@ std::string C_FighterBase::status()
 
 void C_FighterBase::win(C_FighterData * vs, C_Move* vsMove)
 {
-	if (m_pCurrentMove != m_pMoves[4]) {
-		for (int z = 0; z < 3; z++) {
+	if (m_pCurrentMove != m_pMoves[4])
+	{
+		for (int z = 0; z < 3; z++)
+		{
 			m_pFighterData->removeStatus(z);
 		}
 	}
@@ -135,6 +139,21 @@ void C_FighterBase::showInput()
 void C_FighterBase::input()
 {
 	m_pCurrentMove = m_pControler->input(m_pMoves);
+
+	// if the selected move is a hyper move
+	if (m_pCurrentMove == m_pMoves[0])
+	{
+		if (m_pFighterData->canUseHyperSkill())
+		{
+			// if move is possible, tells data to pay costs for it
+			m_pFighterData->useHyper();
+		}
+		else
+		{
+			// if move not possibe, changes it to a light attack
+			m_pCurrentMove = m_pMoves[1];
+		}
+	}
 }
 
 void C_FighterBase::giveStatus(C_Status * pStatus)
@@ -173,7 +192,8 @@ void C_FighterBase::RunStatus()
 
 void C_FighterBase::SyncStatuses()
 {
-	for (int z = 0; z < 3; z++) {
+	for (int z = 0; z < 3; z++)
+	{
 		m_pStatuses[z] = m_pFighterData->getStatus(z);
 	}
 }
