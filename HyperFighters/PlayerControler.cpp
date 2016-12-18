@@ -21,13 +21,6 @@ C_Move* C_PlayerControler::input(C_Move ** moves)
 {
 	char in = ' ';
 
-	C_Move* move0 = moves[0];
-	C_Move* move1 = moves[1];
-	C_Move* move2 = moves[2];
-	C_Move* move3 = moves[3];
-	C_Move* move4 = moves[4];
-	C_Move* move5 = moves[5];
-
 	do
 	{
 		showOptions(moves);
@@ -36,7 +29,8 @@ C_Move* C_PlayerControler::input(C_Move ** moves)
 		in = _getch();
 
 		system("cls");
-	} while (findInputID(in) == -1);
+	}
+	while (findInputID(in) == -1);
 
 	return moves[findInputID(in)];
 }

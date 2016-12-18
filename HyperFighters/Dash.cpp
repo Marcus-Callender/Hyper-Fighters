@@ -52,7 +52,7 @@ void C_DashBase::input()
 		}
 	}
 
-	m_pControler->input(move);
+	m_pCurrentMove = m_pControler->input(move);
 }
 
 C_DashData::C_DashData()
