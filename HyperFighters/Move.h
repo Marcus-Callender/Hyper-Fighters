@@ -214,5 +214,22 @@ protected:
 	void	lose(C_FighterData* vs, C_Move* vsMove);
 };
 
+class C_RushHeatLevel;
+
+class C_heatAttack : public C_L_attack
+{
+public:
+	C_heatAttack(int damage, float speed, double focusGain, std::string name, C_FighterData* pMe, C_RushHeatLevel* pHeatLevel);
+	~C_heatAttack();
+
+	eResult use(C_FighterData* vs, C_Move* vsMove);
+	void win(C_FighterData* vs, C_Move* vsMove);
+
+	int	getDamage();
+
+private:
+	C_RushHeatLevel* m_pHeatLevel;
+};
+
 #endif // !__MOVE_H__
 

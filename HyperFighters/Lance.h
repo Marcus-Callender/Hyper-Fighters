@@ -3,7 +3,9 @@
 
 #include "FighterBase.h"
 
-class C_LanceCharge
+#include "ExtraFighterData.h"
+
+/*class C_LanceCharge
 {
 public:
 	C_LanceCharge();
@@ -15,7 +17,7 @@ public:
 
 private:
 	int m_charged;
-};
+};*/
 
 class C_LanceBase : public C_FighterBase
 {

@@ -131,33 +131,6 @@ void C_FighterBase::input()
 void C_FighterBase::giveStatus(C_Status * pStatus)
 {
 	m_pFighterData->giveStatus(pStatus);
-
-	/*C_Status* pStatus = static_cast<C_Status*>(m_pFighterData->getStatus());
-
-	if (pStatus != nullptr)
-	{
-		bool alreadyGot = false;
-
-		for (int z = 0; z < 3; z++)
-		{
-			if (m_pStatuses[z] == pStatus)
-			{
-				alreadyGot = true;
-			}
-		}
-
-		if (!alreadyGot)
-		{
-			for (int z = 0; z < 3; z++)
-			{
-				if (m_pStatuses[z] == nullptr)
-				{
-					m_pStatuses[z] = pStatus;
-					break;
-				}
-			}
-		}
-	}*/
 }
 
 void C_FighterBase::removeStatus(C_Status * pStatus)
@@ -173,8 +146,6 @@ void C_FighterBase::removeStatus(C_Status * pStatus)
 
 void C_FighterBase::rest()
 {
-	//giveStatus();
-
 	m_pFighterData->rest();
 }
 

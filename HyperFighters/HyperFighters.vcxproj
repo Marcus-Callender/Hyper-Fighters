@@ -155,6 +155,7 @@
     <ClInclude Include="Lance.h" />
     <ClInclude Include="Move.h" />
     <ClInclude Include="PlayerControler.h" />
+    <ClInclude Include="ExtraFighterData.h" />
     <ClInclude Include="Refere.h" />
     <ClInclude Include="Rush.h" />
     <ClInclude Include="Status.h" />
@@ -175,6 +176,7 @@
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Move.cpp" />
     <ClCompile Include="PlayerControler.cpp" />
+    <ClCompile Include="ExtraFighterData.cpp" />
     <ClCompile Include="Refere.cpp" />
     <ClCompile Include="Rush.cpp" />
     <ClCompile Include="Status.cpp" />

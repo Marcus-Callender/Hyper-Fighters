@@ -3,7 +3,9 @@
 
 #include "FighterBase.h"
 
-class C_DashLuckyMoves
+#include "ExtraFighterData.h"
+
+/*class C_DashLuckyMoves
 {
 public:
 	C_DashLuckyMoves();
@@ -15,7 +17,7 @@ public:
 
 private:
 	int m_luckyMove;
-};
+};*/
 
 class C_DashBase : public C_FighterBase
 {

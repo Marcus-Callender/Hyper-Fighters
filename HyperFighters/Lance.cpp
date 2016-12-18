@@ -1,6 +1,6 @@
 #include "Lance.h"
 
-C_LanceCharge::C_LanceCharge()
+/*C_LanceCharge::C_LanceCharge()
 {
 	m_charged = 0;
 }
@@ -36,7 +36,7 @@ std::string C_LanceCharge::getChargeString()
 	{
 		return " (uncharged)";
 	}
-}
+}*/
 
 C_LanceBase::C_LanceBase(e_controlerType controler) : C_FighterBase::C_FighterBase(controler)
 {

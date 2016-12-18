@@ -1,6 +1,6 @@
 #include "Rush.h"
 
-C_RushHeatLevel::C_RushHeatLevel()
+/*C_RushHeatLevel::C_RushHeatLevel()
 {
 	m_heatLevel = 0;
 	m_maxHeat = 5;
@@ -27,7 +27,7 @@ float C_RushHeatLevel::focusMultiplyer()
 std::string C_RushHeatLevel::getHeatString()
 {
 	return " (heat: " + std::to_string(m_heatLevel) + ")";
-}
+}*/
 
 C_RushBase::C_RushBase(e_controlerType controler) : C_FighterBase::C_FighterBase(controler)
 {

@@ -1,5 +1,7 @@
 #include "Move.h"
 
+#include "ExtraFighterData.h"
+
 #include <iostream>
 #include <math.h>
 
@@ -506,3 +508,27 @@ void C_ModeOff::lose(C_FighterData* vs, C_Move* vsMove)
 	//m_pMe->misc(false);
 }
 
+C_heatAttack::C_heatAttack(int damage, float speed, double focusGain, std::string name, C_FighterData * pMe, C_RushHeatLevel * pHeatLevel) : C_L_attack(damage, speed, focusGain, name, pMe)
+{
+	m_pHeatLevel = pHeatLevel;
+}
+
+C_heatAttack::~C_heatAttack()
+{
+	m_pHeatLevel = nullptr;
+}
+
+eResult C_heatAttack::use(C_FighterData * vs, C_Move * vsMove)
+{
+	return eResult();
+}
+
+void C_heatAttack::win(C_FighterData * vs, C_Move * vsMove)
+{
+}
+
+int C_heatAttack::getDamage()
+{
+	//return m_damage + m_pHeatLevel->;
+	return 0;
+}

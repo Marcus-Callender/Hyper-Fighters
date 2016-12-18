@@ -3,7 +3,9 @@
 
 #include "FighterBase.h"
 
-class C_RushHeatLevel
+#include "ExtraFighterData.h"
+
+/*class C_RushHeatLevel
 {
 public:
 	C_RushHeatLevel();
@@ -20,7 +22,7 @@ private:
 	int m_maxHeat;
 
 	float m_heatFocusGain = 0.2;
-};
+};*/
 
 class C_RushBase : public C_FighterBase
 {

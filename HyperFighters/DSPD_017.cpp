@@ -1,6 +1,6 @@
 #include "DSPD_017.h"
 
-C_DSPD_017_Overload::C_DSPD_017_Overload()
+/*C_DSPD_017_Overload::C_DSPD_017_Overload()
 {
 	m_overloaded = false;
 	m_heatCost = 20;
@@ -52,7 +52,7 @@ bool C_DSPD_017_Overload::CanUseHyper(int focus)
 		return true;
 
 	return false;
-}
+}*/
 
 C_DSPD_017_Base::C_DSPD_017_Base(e_controlerType controler) : C_FighterBase::C_FighterBase(controler)
 {

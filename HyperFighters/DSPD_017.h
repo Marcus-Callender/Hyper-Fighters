@@ -3,7 +3,9 @@
 
 #include "FighterBase.h"
 
-class C_DSPD_017_Overload
+#include "ExtraFighterData.h"
+
+/*class C_DSPD_017_Overload
 {
 public:
 	C_DSPD_017_Overload();
@@ -19,7 +21,7 @@ private:
 	bool m_overloaded;
 	int m_heatCost;
 	float m_overloadedDamage;
-};
+};*/
 
 class C_DSPD_017_Base : public C_FighterBase
 {
