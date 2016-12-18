@@ -119,6 +119,8 @@ void C_FighterData::takeFocusDamage(int ammount)
 
 	if (m_focus < 0)
 	{
+		m_previousFocus += 0 - m_focus;
+		
 		m_focus = 0;
 	}
 }

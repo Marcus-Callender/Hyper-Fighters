@@ -75,8 +75,17 @@ std::string C_LanceBase::status()
 
 	if (m_pFighterData->getFocus() != m_pFighterData->getPreviousFocus())
 	{
-		statString += "(+ ";
-		statString += std::to_string(m_pFighterData->getFocus() - m_pFighterData->getPreviousFocus());
+		if (m_pFighterData->getFocus() > m_pFighterData->getPreviousFocus())
+		{
+			statString += "(+ ";
+			statString += std::to_string(m_pFighterData->getFocus() - m_pFighterData->getPreviousFocus());
+		}
+		else
+		{
+			statString += "(- ";
+			statString += std::to_string(m_pFighterData->getPreviousFocus() - m_pFighterData->getFocus());
+		}
+
 		statString += ")";
 	}
 
