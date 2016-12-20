@@ -4,12 +4,13 @@
 #include "FighterData.h"
 #include "Enums.h"
 #include "Status.h"
+#include "ExtraFighterData.h";
 
 class C_Move
 {
 public:
 	C_Move();
-	C_Move(int damage, float speed, double focusGain, std::string name, C_FighterData* pMe);
+	C_Move(int damage, float speed, bool knockDown, double focusGain, std::string name, C_FighterData* pMe);
 	~C_Move();
 
 	virtual eResult use(C_FighterData* vs, C_Move* vsMove) = 0;
@@ -24,6 +25,7 @@ public:
 protected:
 	int m_damage;
 	float m_speed;
+	bool m_knockDown;
 	double m_FocusGain;
 	std::string m_name;
 	eType m_type;
@@ -34,7 +36,7 @@ class C_L_attack : public C_Move
 {
 public:
 
-	C_L_attack(int damage, float speed, double focusGain, std::string name, C_FighterData* pMe);
+	C_L_attack(int damage, float speed, bool knockDown, double focusGain, std::string name, C_FighterData* pMe);
 
 	eResult use(C_FighterData* vs, C_Move* vsMove);
 
@@ -47,7 +49,7 @@ protected:
 class C_H_attack : public C_Move
 {
 public:
-	C_H_attack(int damage, float speed, double focusGain, std::string name, C_FighterData* pMe);
+	C_H_attack(int damage, float speed, bool knockDown, double focusGain, std::string name, C_FighterData* pMe);
 
 	eResult use(C_FighterData* vs, C_Move* vsMove);
 
@@ -59,7 +61,7 @@ protected:
 class C_throw : public C_Move
 {
 public:
-	C_throw(int damage, float speed, double focusGain, std::string name, C_FighterData* pMe);
+	C_throw(int damage, float speed, bool knockDown, double focusGain, std::string name, C_FighterData* pMe);
 
 	eResult use(C_FighterData* vs, C_Move* vsMove);
 
@@ -72,7 +74,7 @@ class C_block : public C_Move
 {
 public:
 	C_block();
-	C_block(int damage, float speed, double focusGain, std::string name, C_FighterData* pMe);
+	C_block(int damage, float speed, bool knockDown, double focusGain, std::string name, C_FighterData* pMe);
 
 	eResult use(C_FighterData* vs, C_Move* vsMove);
 
@@ -84,7 +86,7 @@ protected:
 class C_dodge : public C_Move
 {
 public:
-	C_dodge(int damage, float speed, double focusGain, std::string name, C_FighterData* pMe);
+	C_dodge(int damage, float speed, bool knockDown, double focusGain, std::string name, C_FighterData* pMe);
 
 	eResult use(C_FighterData* vs, C_Move* vsMove);
 
@@ -96,7 +98,7 @@ protected:
 class C_parry : public C_Move
 {
 public:
-	C_parry(int damage, float speed, double focusGain, std::string name, C_FighterData* pMe, eType parries);
+	C_parry(int damage, float speed, bool knockDown, double focusGain, std::string name, C_FighterData* pMe, eType parries);
 
 	eResult use(C_FighterData* vs, C_Move* vsMove);
 
@@ -107,43 +109,43 @@ protected:
 	eType m_beats;
 };
 
-class C_KD_throw :public C_throw
-{
-public:
-	C_KD_throw(int damage, float speed, double focusGain, std::string name, C_FighterData* pMe);
-
-protected:
-	void win(C_FighterData* vs, C_Move* vsMove);
-};
+//class C_KD_throw :public C_throw
+//{
+//public:
+//	C_KD_throw(int damage, float speed, bool knockDown, double focusGain, std::string name, C_FighterData* pMe);
+//
+//protected:
+//	void win(C_FighterData* vs, C_Move* vsMove);
+//};
 
 class C_instantAttack : public C_H_attack
 {
 public:
-	C_instantAttack(int damage, float speed, double focusGain, std::string name, C_FighterData* pMe);
+	C_instantAttack(int damage, float speed, bool knockDown, double focusGain, std::string name, C_FighterData* pMe);
 
 	float getSpeed();
 };
 
-class C_KD_instantAttack : public C_instantAttack
-{
-public:
-	C_KD_instantAttack(int damage, float speed, double focusGain, std::string name, C_FighterData* pMe);
+//class C_KD_instantAttack : public C_instantAttack
+//{
+//public:
+//	C_KD_instantAttack(int damage, float speed, bool knockDown, double focusGain, std::string name, C_FighterData* pMe);
+//
+//	void win(C_FighterData* vs, C_Move* vsMove);
+//};
 
-	void win(C_FighterData* vs, C_Move* vsMove);
-};
-
-class C_KD_H_attack : public C_H_attack
-{
-public:
-	C_KD_H_attack(int damage, float speed, double focusGain, std::string name, C_FighterData* pMe);
-
-	void win(C_FighterData* vs, C_Move* vsMove);
-};
+//class C_KD_H_attack : public C_H_attack
+//{
+//public:
+//	C_KD_H_attack(int damage, float speed, bool knockDown, double focusGain, std::string name, C_FighterData* pMe);
+//
+//	void win(C_FighterData* vs, C_Move* vsMove);
+//};
 
 class C_counter : public C_Move
 {
 public:
-	C_counter(int damage, float speed, double focusGain, std::string name, C_FighterData* pMe);
+	C_counter(int damage, float speed, bool knockDown, double focusGain, std::string name, C_FighterData* pMe);
 
 	eResult use(C_FighterData* vs, C_Move* vsMove);
 
@@ -155,7 +157,7 @@ protected:
 class C_vampireGrab :public C_throw
 {
 public:
-	C_vampireGrab(int damage, float speed, double focusGain, std::string name, C_FighterData* pMe, int lifeSteal);
+	C_vampireGrab(int damage, float speed, bool knockDown, double focusGain, std::string name, C_FighterData* pMe, int lifeSteal);
 
 	eResult use(C_FighterData* vs, C_Move* vsMove);
 
@@ -169,7 +171,7 @@ protected:
 class C_ToxicAttack : public C_L_attack
 {
 public:
-	C_ToxicAttack(int damage, float speed, double focusGain, std::string name, C_FighterData* pMe, C_Status* pStatus);
+	C_ToxicAttack(int damage, float speed, bool knockDown, double focusGain, std::string name, C_FighterData* pMe, C_Status* pStatus);
 
 protected:
 
@@ -181,7 +183,7 @@ protected:
 class C_VenomAttack : public C_H_attack
 {
 public:
-	C_VenomAttack(int damage, float speed, double focusGain, std::string name, C_FighterData* pMe, C_Status* pStatus);
+	C_VenomAttack(int damage, float speed, bool knockDown, double focusGain, std::string name, C_FighterData* pMe, C_Status* pStatus);
 
 protected:
 
@@ -193,7 +195,7 @@ protected:
 class C_ModeOn : public C_Move
 {
 public:
-	C_ModeOn(int damage, float speed, double focusGain, std::string name, C_FighterData* pMe);
+	C_ModeOn(int damage, float speed, bool knockDown, double focusGain, std::string name, C_FighterData* pMe);
 
 	eResult use(C_FighterData* vs, C_Move* vsMove);
 
@@ -205,7 +207,7 @@ protected:
 class C_ModeOff : public C_Move
 {
 public:
-	C_ModeOff(int damage, float speed, double focusGain, std::string name, C_FighterData* pMe);
+	C_ModeOff(int damage, float speed, bool knockDown, double focusGain, std::string name, C_FighterData* pMe);
 
 	eResult use(C_FighterData* vs, C_Move* vsMove);
 
@@ -214,15 +216,12 @@ protected:
 	void	lose(C_FighterData* vs, C_Move* vsMove);
 };
 
-class C_RushHeatLevel;
-
 class C_heatAttack : public C_L_attack
 {
 public:
-	C_heatAttack(int damage, float speed, double focusGain, std::string name, C_FighterData* pMe, C_RushHeatLevel* pHeatLevel);
+	C_heatAttack(int damage, float speed, bool knockDown, double focusGain, std::string name, C_FighterData* pMe, C_RushHeatLevel* pHeatLevel);
 	~C_heatAttack();
 
-	//eResult use(C_FighterData* vs, C_Move* vsMove);
 	void win(C_FighterData* vs, C_Move* vsMove);
 
 	int	getDamage();

@@ -37,12 +37,12 @@ C_RushBase::C_RushBase(e_controlerType controler) : C_FighterBase::C_FighterBase
 
 	m_pFighterData->reciveCustomData(m_heatLevel);
 
-	m_pMoves[0] = new C_heatAttack(30, 0.5f, 12.0, "Reverse meteor cannon", m_pFighterData, m_heatLevel);
-	m_pMoves[1] = new C_L_attack(15, 1.0f, 8.0, "Light attack", m_pFighterData);
-	m_pMoves[2] = new C_H_attack(23, 2.0f, 13.0, "Heavy attack", m_pFighterData);
-	m_pMoves[3] = new C_KD_throw(25, 3.0f, 18.0, "Throw", m_pFighterData);
-	m_pMoves[4] = new C_parry(10, 0.0f, 2.0, "Light parry", m_pFighterData, L_ATTACK);
-	m_pMoves[5] = new C_parry(20, 0.0f, 2.2, "Heavy parry", m_pFighterData, H_ATTACK);
+	m_pMoves[0] = new C_heatAttack(30, 0.5f, false, 12.0, "Reverse meteor cannon", m_pFighterData, m_heatLevel);
+	m_pMoves[1] = new C_L_attack(15, 1.0f, false, 8.0, "Light attack", m_pFighterData);
+	m_pMoves[2] = new C_H_attack(23, 2.0f, false, 13.0, "Heavy attack", m_pFighterData);
+	m_pMoves[3] = new C_throw(25, 3.0f, true, 18.0, "Throw", m_pFighterData);
+	m_pMoves[4] = new C_parry(10, 0.0f, false, 2.0, "Light parry", m_pFighterData, L_ATTACK);
+	m_pMoves[5] = new C_parry(20, 0.0f, false, 2.2, "Heavy parry", m_pFighterData, H_ATTACK);
 
 	m_pCurrentMove = m_pMoves[1];
 }
