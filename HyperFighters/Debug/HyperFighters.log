@@ -1,6 +1,5 @@
-﻿  Rush.cpp
+﻿  Move.cpp
 c:\users\user\desktop\hyper-fighters\hyperfighters\move.h(7): warning C4067: unexpected tokens following preprocessor directive - expected a newline
 c:\users\user\desktop\hyper-fighters\hyperfighters\extrafighterdata.h(37): warning C4305: 'initializing': truncation from 'double' to 'float'
-c:\users\user\desktop\hyper-fighters\hyperfighters\rush.cpp(135): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
   HyperFighters.vcxproj -> C:\Users\User\Desktop\Hyper-Fighters\Debug\HyperFighters.exe
   HyperFighters.vcxproj -> C:\Users\User\Desktop\Hyper-Fighters\Debug\HyperFighters.pdb (Full PDB)
