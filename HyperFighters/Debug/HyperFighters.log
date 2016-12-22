@@ -1,13 +1,72 @@
-<<<<<<< HEAD
-﻿  Move.cpp
+﻿  Wave.cpp
 c:\users\user\desktop\hyper-fighters\hyperfighters\move.h(7): warning C4067: unexpected tokens following preprocessor directive - expected a newline
 c:\users\user\desktop\hyper-fighters\hyperfighters\extrafighterdata.h(37): warning C4305: 'initializing': truncation from 'double' to 'float'
-=======
-﻿  Dash.cpp
-  Generating Code...
-c:\users\user\desktop\hyper-fighters\hyperfighters\dash.cpp(124): warning C4172: returning address of local variable or temporary: toReturn
-  Skipping... (no relevant changes detected)
+  Tarja.cpp
+c:\users\user\desktop\hyper-fighters\hyperfighters\move.h(7): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+c:\users\user\desktop\hyper-fighters\hyperfighters\extrafighterdata.h(37): warning C4305: 'initializing': truncation from 'double' to 'float'
   Refere.cpp
->>>>>>> origin/master
-  HyperFighters.vcxproj -> C:\Users\User\Desktop\Hyper-Fighters\Debug\HyperFighters.exe
-  HyperFighters.vcxproj -> C:\Users\User\Desktop\Hyper-Fighters\Debug\HyperFighters.pdb (Full PDB)
+c:\users\user\desktop\hyper-fighters\hyperfighters\move.h(7): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+c:\users\user\desktop\hyper-fighters\hyperfighters\extrafighterdata.h(37): warning C4305: 'initializing': truncation from 'double' to 'float'
+  PlayerControler.cpp
+c:\users\user\desktop\hyper-fighters\hyperfighters\move.h(7): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+c:\users\user\desktop\hyper-fighters\hyperfighters\extrafighterdata.h(37): warning C4305: 'initializing': truncation from 'double' to 'float'
+  Fenrir.cpp
+c:\users\user\desktop\hyper-fighters\hyperfighters\move.h(7): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+c:\users\user\desktop\hyper-fighters\hyperfighters\extrafighterdata.h(37): warning C4305: 'initializing': truncation from 'double' to 'float'
+  ExtraFighterData.cpp
+c:\users\user\desktop\hyper-fighters\hyperfighters\extrafighterdata.h(37): warning C4305: 'initializing': truncation from 'double' to 'float'
+  Dash.cpp
+c:\users\user\desktop\hyper-fighters\hyperfighters\move.h(7): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+c:\users\user\desktop\hyper-fighters\hyperfighters\extrafighterdata.h(37): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\user\desktop\hyper-fighters\hyperfighters\dash.cpp(13): error C2059: syntax error: '<<'
+c:\users\user\desktop\hyper-fighters\hyperfighters\dash.cpp(27): error C2059: syntax error: '=='
+c:\users\user\desktop\hyper-fighters\hyperfighters\dash.cpp(29): error C2661: 'C_L_attack::C_L_attack': no overloaded function takes 5 arguments
+c:\users\user\desktop\hyper-fighters\hyperfighters\dash.cpp(30): error C2061: syntax error: identifier 'C_KD_H_attack'
+c:\users\user\desktop\hyper-fighters\hyperfighters\dash.cpp(31): error C2661: 'C_throw::C_throw': no overloaded function takes 5 arguments
+c:\users\user\desktop\hyper-fighters\hyperfighters\dash.cpp(32): error C2661: 'C_block::C_block': no overloaded function takes 5 arguments
+c:\users\user\desktop\hyper-fighters\hyperfighters\dash.cpp(33): error C2661: 'C_parry::C_parry': no overloaded function takes 6 arguments
+c:\users\user\desktop\hyper-fighters\hyperfighters\dash.cpp(35): error C2661: 'C_L_attack::C_L_attack': no overloaded function takes 5 arguments
+c:\users\user\desktop\hyper-fighters\hyperfighters\dash.cpp(36): error C2061: syntax error: identifier 'C_KD_H_attack'
+c:\users\user\desktop\hyper-fighters\hyperfighters\dash.cpp(37): error C2661: 'C_throw::C_throw': no overloaded function takes 5 arguments
+c:\users\user\desktop\hyper-fighters\hyperfighters\dash.cpp(38): error C2661: 'C_block::C_block': no overloaded function takes 5 arguments
+c:\users\user\desktop\hyper-fighters\hyperfighters\dash.cpp(39): error C2661: 'C_parry::C_parry': no overloaded function takes 6 arguments
+c:\users\user\desktop\hyper-fighters\hyperfighters\dash.cpp(40): error C2059: syntax error: '>>'
+c:\users\user\desktop\hyper-fighters\hyperfighters\dash.cpp(58): error C2059: syntax error: '<<'
+c:\users\user\desktop\hyper-fighters\hyperfighters\dash.cpp(65): error C2065: 'move': undeclared identifier
+c:\users\user\desktop\hyper-fighters\hyperfighters\dash.cpp(69): error C2065: 'move': undeclared identifier
+c:\users\user\desktop\hyper-fighters\hyperfighters\dash.cpp(73): error C2065: 'move': undeclared identifier
+c:\users\user\desktop\hyper-fighters\hyperfighters\dash.cpp(74): error C2059: syntax error: '=='
+c:\users\user\desktop\hyper-fighters\hyperfighters\dash.cpp(81): error C2065: 'moves': undeclared identifier
+c:\users\user\desktop\hyper-fighters\hyperfighters\dash.cpp(85): error C2065: 'moves': undeclared identifier
+c:\users\user\desktop\hyper-fighters\hyperfighters\dash.cpp(89): error C2065: 'moves': undeclared identifier
+c:\users\user\desktop\hyper-fighters\hyperfighters\dash.cpp(90): error C2059: syntax error: '>>'
+c:\users\user\desktop\hyper-fighters\hyperfighters\dash.cpp(142): error C2059: syntax error: '<<'
+c:\users\user\desktop\hyper-fighters\hyperfighters\dash.cpp(162): error C2039: 'SetMoves': is not a member of 'C_DashLuckyMoves'
+  c:\users\user\desktop\hyper-fighters\hyperfighters\extrafighterdata.h(59): note: see declaration of 'C_DashLuckyMoves'
+c:\users\user\desktop\hyper-fighters\hyperfighters\dash.cpp(163): error C2143: syntax error: missing ';' before '{'
+c:\users\user\desktop\hyper-fighters\hyperfighters\dash.cpp(163): error C2447: '{': missing function header (old-style formal list?)
+c:\users\user\desktop\hyper-fighters\hyperfighters\dash.cpp(180): error C2059: syntax error: '>>'
+  DSPD_017.cpp
+c:\users\user\desktop\hyper-fighters\hyperfighters\move.h(7): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+c:\users\user\desktop\hyper-fighters\hyperfighters\extrafighterdata.h(37): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\user\desktop\hyper-fighters\hyperfighters\dspd_017.cpp(67): error C2059: syntax error: '<<'
+c:\users\user\desktop\hyper-fighters\hyperfighters\dspd_017.cpp(81): error C2059: syntax error: '=='
+c:\users\user\desktop\hyper-fighters\hyperfighters\dspd_017.cpp(83): error C2661: 'C_L_attack::C_L_attack': no overloaded function takes 5 arguments
+c:\users\user\desktop\hyper-fighters\hyperfighters\dspd_017.cpp(84): error C2661: 'C_H_attack::C_H_attack': no overloaded function takes 5 arguments
+c:\users\user\desktop\hyper-fighters\hyperfighters\dspd_017.cpp(85): error C2061: syntax error: identifier 'C_KD_throw'
+c:\users\user\desktop\hyper-fighters\hyperfighters\dspd_017.cpp(86): error C2661: 'C_block::C_block': no overloaded function takes 5 arguments
+c:\users\user\desktop\hyper-fighters\hyperfighters\dspd_017.cpp(87): error C2661: 'C_dodge::C_dodge': no overloaded function takes 5 arguments
+c:\users\user\desktop\hyper-fighters\hyperfighters\dspd_017.cpp(89): error C2661: 'C_ModeOff::C_ModeOff': no overloaded function takes 5 arguments
+c:\users\user\desktop\hyper-fighters\hyperfighters\dspd_017.cpp(90): error C2661: 'C_L_attack::C_L_attack': no overloaded function takes 5 arguments
+c:\users\user\desktop\hyper-fighters\hyperfighters\dspd_017.cpp(91): error C2061: syntax error: identifier 'C_KD_H_attack'
+c:\users\user\desktop\hyper-fighters\hyperfighters\dspd_017.cpp(92): error C2061: syntax error: identifier 'C_KD_throw'
+c:\users\user\desktop\hyper-fighters\hyperfighters\dspd_017.cpp(93): error C2661: 'C_block::C_block': no overloaded function takes 5 arguments
+c:\users\user\desktop\hyper-fighters\hyperfighters\dspd_017.cpp(94): error C2661: 'C_dodge::C_dodge': no overloaded function takes 5 arguments
+c:\users\user\desktop\hyper-fighters\hyperfighters\dspd_017.cpp(95): error C2059: syntax error: '>>'
+  Controler.cpp
+c:\users\user\desktop\hyper-fighters\hyperfighters\move.h(7): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+c:\users\user\desktop\hyper-fighters\hyperfighters\extrafighterdata.h(37): warning C4305: 'initializing': truncation from 'double' to 'float'
+  AI_Controler.cpp
+c:\users\user\desktop\hyper-fighters\hyperfighters\move.h(7): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+c:\users\user\desktop\hyper-fighters\hyperfighters\extrafighterdata.h(37): warning C4305: 'initializing': truncation from 'double' to 'float'
+  Generating Code...
