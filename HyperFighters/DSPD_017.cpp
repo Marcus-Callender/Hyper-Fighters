@@ -21,6 +21,7 @@ bool C_DSPD_017_Overload::Sustain(int & heat)
 {
 	if (m_overloaded)
 	{
+		// if in overload deducts cost and if no more focus remains returns to normal
 		heat -= m_heatCost;
 
 		if (heat <= 0)
@@ -40,6 +41,7 @@ bool C_DSPD_017_Overload::GetOverloaded()
 
 float C_DSPD_017_Overload::GetDamageMultiplier()
 {
+	// reduces damage taken when in overload
 	if (m_overloaded)
 		return m_overloadedDamage;
 
@@ -62,6 +64,7 @@ C_DSPD_017_Base::C_DSPD_017_Base(e_controlerType controler) : C_FighterBase::C_F
 
 	m_pFighterData->reciveCustomData(m_pOverloadData);
 
+<<<<<<< HEAD
 	m_pMoves[0] = new C_ModeOn(0, 0.1f, false, 0.0, "Overload circuits", m_pFighterData);
 	m_pMoves[1] = new C_L_attack(13, 1.0f, false, 7.0, "Light hit", m_pFighterData);
 	m_pMoves[2] = new C_H_attack(18, 2.0f, false, 15.0, "Heavy hit", m_pFighterData);
@@ -75,6 +78,21 @@ C_DSPD_017_Base::C_DSPD_017_Base(e_controlerType controler) : C_FighterBase::C_F
 	m_pOverloadedMoves[3] = new C_throw(23, 3.0f, true, 0.0, "Powered Suplex", m_pFighterData);
 	m_pOverloadedMoves[4] = new C_block(0, 0.0f, false, 2.0, "Barier", m_pFighterData);
 	m_pOverloadedMoves[5] = new C_dodge(8, 0.0f, false, 0.0, "Powered Counter", m_pFighterData);
+=======
+	m_pMoves[0] = new C_ModeOn					(0, 1.5f, 0.0, "Overload circuits", m_pFighterData);
+	m_pMoves[1] = new C_L_attack				(13, 1.0f, 7.0, "Light hit", m_pFighterData);
+	m_pMoves[2] = new C_H_attack				(18, 2.0f, 15.0, "Heavy hit", m_pFighterData);
+	m_pMoves[3] = new C_KD_throw				(19, 3.0f, 15.0, "Suplex", m_pFighterData);
+	m_pMoves[4] = new C_block					(0, 0.0f, 2.0, "Defend", m_pFighterData);
+	m_pMoves[5] = new C_dodge					(5, 0.0f, 0.5, "Evade", m_pFighterData);
+
+	m_pOverloadedMoves[0] = new C_ModeOff		(0, 1.5f, 0.0, "Vent circuits", m_pFighterData);
+	m_pOverloadedMoves[1] = new C_L_attack		(18, 1.0f, 0.0, "Powered Light hit", m_pFighterData);
+	m_pOverloadedMoves[2] = new C_KD_H_attack	(25, 2.0f, 0.0, "Powered Heavy hit", m_pFighterData);
+	m_pOverloadedMoves[3] = new C_KD_throw		(23, 3.0f, 0.0, "Powered Suplex", m_pFighterData);
+	m_pOverloadedMoves[4] = new C_block			(0, 0.0f, 2.0, "Barier", m_pFighterData);
+	m_pOverloadedMoves[5] = new C_dodge			(8, 0.0f, 0.0, "Powered Counter", m_pFighterData);
+>>>>>>> origin/master
 
 	m_pCurrentMove = m_pMoves[1];
 }
@@ -93,24 +111,29 @@ void C_DSPD_017_Base::input()
 	{
 		if (m_pOverloadData->GetOverloaded())
 		{
+			// if in overloaded state gives controler overloaded moves to use
 			m_pCurrentMove = m_pControler->input(m_pOverloadedMoves);
 		}
 		else
 		{
+			// if not overloaded gives the controler normal moves to use
 			m_pCurrentMove = m_pControler->input(m_pMoves);
 		}
 	}
 	else
 	{
+		// if overload state has just ended this forces the selected move to be "Vent circuits" 
 		m_pCurrentMove = m_pOverloadedMoves[0];
 	}
 
 	if (m_pCurrentMove == m_pMoves[0])
 	{
+		// if not overloaded and use hyper goes into overload
 		m_pOverloadData->Overload();
 	}
 	else if (m_pCurrentMove == m_pOverloadedMoves[0])
 	{
+		// if in overload and use hyper goes back to normal
 		m_pOverloadData->VentHeat();
 	}
 }

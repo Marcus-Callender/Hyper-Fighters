@@ -137,6 +137,7 @@ C_LanceData::C_LanceData() : C_FighterData::C_FighterData()
 
 bool C_LanceData::canUseHyperSkill()
 {
+	// overides hyper move contitions so charge == true is required as well as 100 focnus
 	if ((m_focus == 100) && m_charge->getCharged())
 		return true;
 

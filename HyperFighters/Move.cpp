@@ -25,6 +25,22 @@ C_Move::~C_Move()
 
 std::string C_Move::getInfo()
 {
+	if (m_type == L_ATTACK) {
+		return "(L) " + m_name;
+	}
+	else if (m_type == H_ATTACK) {
+		return "(H) " + m_name;
+	}
+	else if (m_type == THROW) {
+		return "(T) " + m_name;
+	}
+	else if (m_type == BLOCK) {
+		return "(B) " + m_name;
+	}
+	else if (m_type == DODGE) {
+		return "(D) " + m_name;
+	}
+
 	return m_name;
 }
 

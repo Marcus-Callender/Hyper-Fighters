@@ -15,6 +15,10 @@
 
 C_Refere::C_Refere()
 {
+	for (int z = 0; z < 2; z++)
+	{
+		m_pFighters[z] = nullptr;
+	}
 }
 
 C_Refere::~C_Refere()
@@ -138,6 +142,7 @@ void C_Refere::evaluate()
 
 	if (resOne > resTwo)
 	{
+		// player one wins the encounter
 		m_pFighters[0]->win(m_pFighters[1]->getFighterData(), m_pFighters[1]->getCurrentMove());
 		m_pFighters[1]->lose(m_pFighters[0]->getFighterData(), m_pFighters[0]->getCurrentMove());
 
@@ -146,6 +151,7 @@ void C_Refere::evaluate()
 	}
 	else if (resTwo > resOne)
 	{
+		// player two wins the encounter
 		m_pFighters[1]->win(m_pFighters[0]->getFighterData(), m_pFighters[0]->getCurrentMove());
 		m_pFighters[0]->lose(m_pFighters[1]->getFighterData(), m_pFighters[1]->getCurrentMove());
 
@@ -154,6 +160,7 @@ void C_Refere::evaluate()
 	}
 	else if (resTwo == resOne)
 	{
+		// the encounter was a draw
 		if ((resOne == LOSE) || (resOne == SP_LOSE))
 		{
 			m_pFighters[0]->lose(m_pFighters[1]->getFighterData(), m_pFighters[1]->getCurrentMove());

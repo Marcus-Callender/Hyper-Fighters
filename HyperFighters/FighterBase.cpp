@@ -71,7 +71,8 @@ std::string C_FighterBase::status()
 
 	for (int z = 0; z < 3; z++)
 	{
-		if (m_pStatuses[z] != nullptr) {
+		if (m_pStatuses[z] != nullptr)
+		{
 			statString += m_pStatuses[z]->giveSymbol();
 		}
 	}
@@ -86,8 +87,15 @@ std::string C_FighterBase::status()
 
 void C_FighterBase::win(C_FighterData * vs, C_Move* vsMove)
 {
+<<<<<<< HEAD
 	if (m_pCurrentMove != m_pMoves[4])
 	{
+=======
+	// If a move was sucsesful in damaging the enemy (move was not a block)
+	if (m_pCurrentMove != m_pMoves[4])
+	{
+		//removes all statuses from the player
+>>>>>>> origin/master
 		for (int z = 0; z < 3; z++)
 		{
 			m_pFighterData->removeStatus(z);
@@ -108,6 +116,8 @@ void C_FighterBase::lose(C_FighterData * vs, C_Move* vsMove)
 
 void C_FighterBase::giveResult(eAI_Result res, eType type)
 {
+	//simplifies the enum to give to the controler so the AI will find it easier to use.
+
 	eAI_Type convertedType = AI_TYPE_NULL;
 
 	if (type == L_ATTACK || type == H_ATTACK)
