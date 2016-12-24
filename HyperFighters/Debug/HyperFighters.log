@@ -1,21 +1,4 @@
-﻿  Wave.cpp
-c:\users\user\desktop\hyper-fighters\hyperfighters\move.h(7): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-c:\users\user\desktop\hyper-fighters\hyperfighters\extrafighterdata.h(37): warning C4305: 'initializing': truncation from 'double' to 'float'
-  Tarja.cpp
-c:\users\user\desktop\hyper-fighters\hyperfighters\move.h(7): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-c:\users\user\desktop\hyper-fighters\hyperfighters\extrafighterdata.h(37): warning C4305: 'initializing': truncation from 'double' to 'float'
-  Refere.cpp
-c:\users\user\desktop\hyper-fighters\hyperfighters\move.h(7): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-c:\users\user\desktop\hyper-fighters\hyperfighters\extrafighterdata.h(37): warning C4305: 'initializing': truncation from 'double' to 'float'
-  PlayerControler.cpp
-c:\users\user\desktop\hyper-fighters\hyperfighters\move.h(7): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-c:\users\user\desktop\hyper-fighters\hyperfighters\extrafighterdata.h(37): warning C4305: 'initializing': truncation from 'double' to 'float'
-  Fenrir.cpp
-c:\users\user\desktop\hyper-fighters\hyperfighters\move.h(7): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-c:\users\user\desktop\hyper-fighters\hyperfighters\extrafighterdata.h(37): warning C4305: 'initializing': truncation from 'double' to 'float'
-  ExtraFighterData.cpp
-c:\users\user\desktop\hyper-fighters\hyperfighters\extrafighterdata.h(37): warning C4305: 'initializing': truncation from 'double' to 'float'
-  Dash.cpp
+﻿  Dash.cpp
 c:\users\user\desktop\hyper-fighters\hyperfighters\move.h(7): warning C4067: unexpected tokens following preprocessor directive - expected a newline
 c:\users\user\desktop\hyper-fighters\hyperfighters\extrafighterdata.h(37): warning C4305: 'initializing': truncation from 'double' to 'float'
 c:\users\user\desktop\hyper-fighters\hyperfighters\dash.cpp(13): error C2059: syntax error: '<<'
@@ -63,10 +46,4 @@ c:\users\user\desktop\hyper-fighters\hyperfighters\dspd_017.cpp(92): error C2061
 c:\users\user\desktop\hyper-fighters\hyperfighters\dspd_017.cpp(93): error C2661: 'C_block::C_block': no overloaded function takes 5 arguments
 c:\users\user\desktop\hyper-fighters\hyperfighters\dspd_017.cpp(94): error C2661: 'C_dodge::C_dodge': no overloaded function takes 5 arguments
 c:\users\user\desktop\hyper-fighters\hyperfighters\dspd_017.cpp(95): error C2059: syntax error: '>>'
-  Controler.cpp
-c:\users\user\desktop\hyper-fighters\hyperfighters\move.h(7): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-c:\users\user\desktop\hyper-fighters\hyperfighters\extrafighterdata.h(37): warning C4305: 'initializing': truncation from 'double' to 'float'
-  AI_Controler.cpp
-c:\users\user\desktop\hyper-fighters\hyperfighters\move.h(7): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-c:\users\user\desktop\hyper-fighters\hyperfighters\extrafighterdata.h(37): warning C4305: 'initializing': truncation from 'double' to 'float'
   Generating Code...
