@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿  Dash.cpp
 c:\users\user\desktop\hyper-fighters\hyperfighters\move.h(7): warning C4067: unexpected tokens following preprocessor directive - expected a newline
 c:\users\user\desktop\hyper-fighters\hyperfighters\extrafighterdata.h(37): warning C4305: 'initializing': truncation from 'double' to 'float'
@@ -47,3 +48,11 @@ c:\users\user\desktop\hyper-fighters\hyperfighters\dspd_017.cpp(93): error C2661
 c:\users\user\desktop\hyper-fighters\hyperfighters\dspd_017.cpp(94): error C2661: 'C_dodge::C_dodge': no overloaded function takes 5 arguments
 c:\users\user\desktop\hyper-fighters\hyperfighters\dspd_017.cpp(95): error C2059: syntax error: '>>'
   Generating Code...
+=======
+﻿  Rush.cpp
+c:\users\user\desktop\hyper-fighters\hyperfighters\move.h(7): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+c:\users\user\desktop\hyper-fighters\hyperfighters\extrafighterdata.h(37): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\user\desktop\hyper-fighters\hyperfighters\rush.cpp(135): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
+  HyperFighters.vcxproj -> C:\Users\User\Desktop\Hyper-Fighters\Debug\HyperFighters.exe
+  HyperFighters.vcxproj -> C:\Users\User\Desktop\Hyper-Fighters\Debug\HyperFighters.pdb (Full PDB)
+>>>>>>> parent of 08b4b63... Fixed errors where all atacks would knock down.

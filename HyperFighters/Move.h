@@ -109,6 +109,15 @@ protected:
 	eType m_beats;
 };
 
+//class C_KD_throw :public C_throw
+//{
+//public:
+//	C_KD_throw(int damage, float speed, bool knockDown, double focusGain, std::string name, C_FighterData* pMe);
+//
+//protected:
+//	void win(C_FighterData* vs, C_Move* vsMove);
+//};
+
 class C_instantAttack : public C_H_attack
 {
 public:
@@ -116,6 +125,22 @@ public:
 
 	float getSpeed();
 };
+
+//class C_KD_instantAttack : public C_instantAttack
+//{
+//public:
+//	C_KD_instantAttack(int damage, float speed, bool knockDown, double focusGain, std::string name, C_FighterData* pMe);
+//
+//	void win(C_FighterData* vs, C_Move* vsMove);
+//};
+
+//class C_KD_H_attack : public C_H_attack
+//{
+//public:
+//	C_KD_H_attack(int damage, float speed, bool knockDown, double focusGain, std::string name, C_FighterData* pMe);
+//
+//	void win(C_FighterData* vs, C_Move* vsMove);
+//};
 
 class C_counter : public C_Move
 {

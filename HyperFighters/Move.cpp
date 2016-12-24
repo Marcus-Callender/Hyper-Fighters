@@ -13,7 +13,6 @@ C_Move::C_Move(int damage, float speed, bool knockDown, double focusGain, std::s
 {
 	m_damage = damage;
 	m_speed = speed;
-	m_knockDown = knockDown;
 	m_FocusGain = focusGain;
 	m_name = name;
 	m_pMe = pMe;
@@ -330,6 +329,16 @@ void C_parry::lose(C_FighterData * vs, C_Move * vsMove)
 {
 }
 
+//C_KD_throw::C_KD_throw(int damage, float speed, bool knockDown, double focusGain, std::string name, C_FighterData * pMe) : C_throw(damage, speed, knockDown, focusGain, name, pMe)
+//{
+//}
+
+//void C_KD_throw::win(C_FighterData * vs, C_Move * vsMove)
+//{
+//	C_throw::win(vs, vsMove);
+//	vs->knockDown();
+//}
+
 C_instantAttack::C_instantAttack(int damage, float speed, bool knockDown, double focusGain, std::string name, C_FighterData * pMe) : C_H_attack(damage, speed, knockDown, focusGain, name, pMe)
 {
 	m_type = H_ATTACK;
@@ -339,6 +348,26 @@ float C_instantAttack::getSpeed()
 {
 	return m_speed;
 }
+
+//C_KD_instantAttack::C_KD_instantAttack(int damage, float speed, bool knockDown, double focusGain, std::string name, C_FighterData * pMe) : C_instantAttack(damage, speed, knockDown, focusGain, name, pMe)
+//{
+//}
+
+//void C_KD_instantAttack::win(C_FighterData * vs, C_Move * vsMove)
+//{
+//	C_instantAttack::win(vs, vsMove);
+//	vs->knockDown();
+//}
+
+//C_KD_H_attack::C_KD_H_attack(int damage, float speed, bool knockDown, double focusGain, std::string name, C_FighterData * pMe) : C_H_attack(damage, speed, knockDown, focusGain, name, pMe)
+//{
+//}
+
+//void C_KD_H_attack::win(C_FighterData * vs, C_Move * vsMove)
+//{
+//	C_H_attack::win(vs, vsMove);
+//	vs->knockDown();
+//}
 
 C_counter::C_counter(int damage, float speed, bool knockDown, double focusGain, std::string name, C_FighterData * pMe) : C_Move(damage, speed, knockDown, focusGain, name, pMe)
 {
