@@ -35,6 +35,10 @@ int C_Move::getDamage()
 
 float C_Move::getSpeed()
 {
+	if (m_pMe->getKnockedDown()) {
+		return m_speed + 1.0f; 
+	}
+
 	return m_speed;
 }
 
