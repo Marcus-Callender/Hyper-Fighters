@@ -5,24 +5,6 @@
 
 #include "ExtraFighterData.h"
 
-/*class C_DSPD_017_Overload
-{
-public:
-	C_DSPD_017_Overload();
-
-	void Overload();
-	void VentHeat();
-	bool Sustain(int& heat);
-	bool GetOverloaded();
-	float GetDamageMultiplier();
-	bool CanUseHyper(int focus);
-
-private:
-	bool m_overloaded;
-	int m_heatCost;
-	float m_overloadedDamage;
-};*/
-
 class C_DSPD_017_Base : public C_FighterBase
 {
 public:

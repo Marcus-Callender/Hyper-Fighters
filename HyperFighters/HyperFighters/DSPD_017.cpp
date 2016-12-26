@@ -1,59 +1,5 @@
 #include "DSPD_017.h"
 
-/*C_DSPD_017_Overload::C_DSPD_017_Overload()
-{
-	m_overloaded = false;
-	m_heatCost = 20;
-	m_overloadedDamage = 0.80f;
-}
-
-void C_DSPD_017_Overload::Overload()
-{
-	m_overloaded = true;
-}
-
-void C_DSPD_017_Overload::VentHeat()
-{
-	m_overloaded = false;
-}
-
-bool C_DSPD_017_Overload::Sustain(int & heat)
-{
-	if (m_overloaded)
-	{
-		heat -= m_heatCost;
-
-		if (heat <= 0)
-		{
-			heat = 0;
-			return false;
-		}
-	}
-
-	return true;
-}
-
-bool C_DSPD_017_Overload::GetOverloaded()
-{
-	return m_overloaded;
-}
-
-float C_DSPD_017_Overload::GetDamageMultiplier()
-{
-	if (m_overloaded)
-		return m_overloadedDamage;
-
-	return 1.0f;
-}
-
-bool C_DSPD_017_Overload::CanUseHyper(int focus)
-{
-	if (focus >= m_heatCost)
-		return true;
-
-	return false;
-}*/
-
 C_DSPD_017_Base::C_DSPD_017_Base(e_controlerType controler) : C_FighterBase::C_FighterBase(controler)
 {
 	m_pOverloadData = new C_DSPD_017_Overload();
@@ -134,7 +80,7 @@ C_DSPD_017_Data::C_DSPD_017_Data()
 
 void C_DSPD_017_Data::takeDamage(int ammount, bool gainMeter)
 {
-	m_hp -= (int)m_pOverloadData->GetDamageMultiplier();
+	m_hp -= (int) (ammount * m_pOverloadData->GetDamageMultiplier());
 }
 
 bool C_DSPD_017_Data::canUseHyperSkill()
