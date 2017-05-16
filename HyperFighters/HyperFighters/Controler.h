@@ -9,7 +9,7 @@ class C_Controler
 public:
 
 	C_Controler();
-	~C_Controler();
+	virtual ~C_Controler();
 
 	virtual C_Move* input(C_Move** moves) = 0;
 	virtual void result(eResult res, C_Move * vsMove);

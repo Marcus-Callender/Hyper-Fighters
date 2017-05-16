@@ -21,11 +21,25 @@ C_AI_Controler::C_AI_Controler()
 	m_previousType = AI_TYPE_NULL;
 
 	m_defaultMove = 1;
+
+
+	std::ifstream file("scores.txt");
+	std::string line;
+
+	if (file.is_open())
+	{
+		while (std::getline(file, line))
+		{
+			std::cout << line << "\n";
+		}
+
+		file.close();
+	}
 }
 
 C_AI_Controler::~C_AI_Controler()
 {
-	std::fstream file("scores.txt");
+	std::ofstream file("scores.txt");
 
 	for (int z = 0; z < AI_TYPE_TOTAL; z++)
 	{

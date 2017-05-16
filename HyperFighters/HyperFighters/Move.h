@@ -4,7 +4,7 @@
 #include "FighterData.h"
 #include "Enums.h"
 #include "Status.h"
-#include "ExtraFighterData.h";
+#include "ExtraFighterData.h"
 
 class C_Move
 {

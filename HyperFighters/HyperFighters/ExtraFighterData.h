@@ -34,7 +34,7 @@ private:
 	int m_heatLevel;
 	int m_maxHeat;
 
-	float m_heatFocusGain = 0.2;
+	float m_heatFocusGain = 0.2f;
 };
 
 class C_DSPD_017_Overload
