@@ -84,6 +84,13 @@ void C_DashData::reciveCustomData(void * data)
 	m_pLuckyData = (C_DashLuckyMoves*)data;
 }
 
+void C_DashData::rest()
+{
+	C_FighterData::rest();
+
+	m_pLuckyData->Reset();
+}
+
 C_DashLuckyMoves::C_DashLuckyMoves()
 {
 	m_luckyMove = -1;

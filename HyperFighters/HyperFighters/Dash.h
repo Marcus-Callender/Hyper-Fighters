@@ -43,6 +43,8 @@ public:
 
 	void reciveCustomData(void* data);
 
+	void rest();
+
 private:
 	C_DashLuckyMoves* m_pLuckyData;
 };
