@@ -28,9 +28,28 @@ C_AI_Controler::C_AI_Controler()
 
 	if (file.is_open())
 	{
+		int z = 0;
+		int x = 0;
+		int c = 0;
+
 		while (std::getline(file, line))
 		{
 			std::cout << line << "\n";
+			m_data[z][x][c] = std::stoi(line);
+
+			z++;
+
+			if (z > 2)
+			{
+				z = 0;
+				x++;
+
+				if (x > 2)
+				{
+					x = 0;
+					c++;
+				}
+			}
 		}
 
 		file.close();
