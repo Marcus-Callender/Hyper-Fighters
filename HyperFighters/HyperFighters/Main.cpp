@@ -86,7 +86,7 @@ void charicterSelect(C_Refere* pRefere)
 
 		system("cls");
 
-		std::cout << "Player " << (player + 1) << ", select you're fighter!\n";
+		std::cout << "Player " << (player + 1) << ", select you're fighter!\n\n";
 		std::cout << "1: Hothead avenger,   Rush\n";
 		std::cout << "2: Charming criminal, Lance\n";
 		std::cout << "3: Natural killer,    Wave\n";
@@ -167,6 +167,8 @@ int main()
 	}
 
 	_CrtDumpMemoryLeaks();
+
+	std::cout << "\n\n";
 
 	return 0;
 }

@@ -34,6 +34,26 @@ C_Refere::~C_Refere()
 
 void C_Refere::Start()
 {
+	if (m_pFighters[0] && m_pFighters[1])
+	{
+		if (m_pFighters[0]->getFighterData()->getName() == m_pFighters[1]->getFighterData()->getName())
+		{
+			std::string colours[6] = { " (Turquoise)", " (Purple)", " (Yellow)", " (Orange)", " (Lime)", " (Pink)" };
+
+			int roll = rand() % 6;
+
+			int roll2 = rand() % 6;
+
+			while (roll == roll2)
+			{
+				roll2 = rand() % 6;
+			}
+
+			m_pFighters[0]->getFighterData()->addToName(colours[roll]);
+			m_pFighters[1]->getFighterData()->addToName(colours[roll2]);
+		}
+	}
+
 	while (!m_pFighters[0]->getFighterData()->isKOd() && !m_pFighters[1]->getFighterData()->isKOd())
 	{
 		system("cls");
@@ -57,6 +77,7 @@ void C_Refere::Start()
 
 		evaluate();
 
+		std::cout << "\n";
 		system("pause");
 		system("cls");
 	}
@@ -121,7 +142,7 @@ std::string C_Refere::UI()
 
 void C_Refere::HUD()
 {
-	std::cout << m_pFighters[0]->status() << "   vs   " << m_pFighters[1]->status() << "\n";
+	std::cout << m_pFighters[0]->status() << "   vs   " << m_pFighters[1]->status() << "\n\n";
 }
 
 void C_Refere::evaluate()
@@ -179,7 +200,7 @@ void C_Refere::end()
 
 	if (m_pFighters[0]->getFighterData()->getHp() > 0)
 	{
-		std::cout << m_pFighters[0]->getFighterData()->getName() << " wins!!\n";
+		std::cout << "\n--- " << m_pFighters[0]->getFighterData()->getName() << " wins!! ---\n\n";
 	}
 	else if (m_pFighters[1]->getFighterData()->getHp() > 0)
 	{
@@ -190,7 +211,7 @@ void C_Refere::end()
 		std::cout << "The match was a draw.\n";
 	}
 
-	std::cout << "Press any key to continue.\n";
+	//std::cout << "\nPress any key to continue.\n";
 	system("pause");
 }
 
