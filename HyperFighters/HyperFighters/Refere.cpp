@@ -15,6 +15,9 @@
 
 C_Refere::C_Refere()
 {
+	// this sets the fighters so if they aren't created they don't get deleted.
+	m_pFighters[0] = nullptr;
+	m_pFighters[1] = nullptr;
 }
 
 C_Refere::~C_Refere()
