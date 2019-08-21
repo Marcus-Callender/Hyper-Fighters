@@ -1,7 +1,6 @@
 #ifndef __REFERE_H__
 #define __REFERE_H__
 
-//#include "Entity.h"
 #include "FighterBase.h"
 
 #include <string>
