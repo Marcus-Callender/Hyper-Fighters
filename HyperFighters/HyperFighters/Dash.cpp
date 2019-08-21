@@ -2,7 +2,7 @@
 
 #include <conio.h>
 
-C_DashBase::C_DashBase(e_controlerType controler) : C_FighterBase::C_FighterBase(controler)
+C_DashBase::C_DashBase(e_Player_Type controler) : C_FighterBase::C_FighterBase(controler)
 {
 	m_pLuckyData = new C_DashLuckyMoves();
 

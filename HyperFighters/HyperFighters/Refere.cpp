@@ -88,13 +88,13 @@ void C_Refere::Start()
 	end();
 }
 
-void C_Refere::InitializeControlers(e_controlerType type0, e_controlerType type1)
+void C_Refere::InitializeControlers(e_Player_Type type0, e_Player_Type type1)
 {
 	m_controler[0] = type0;
 	m_controler[1] = type1;
 }
 
-void C_Refere::InitializeCharicter(int z, e_charicterType charicter)
+void C_Refere::InitializeCharicter(int z, e_Charicter_Type charicter)
 {
 	if (charicter == TYPE_RUSH)
 	{
@@ -154,8 +154,8 @@ void C_Refere::evaluate()
 	m_pFighters[1]->showInput();
 	std::cout << "\n";
 
-	eResult resOne = m_pFighters[0]->use(m_pFighters[1]->getFighterData(), m_pFighters[1]->getCurrentMove());
-	eResult resTwo = m_pFighters[1]->use(m_pFighters[0]->getFighterData(), m_pFighters[0]->getCurrentMove());
+	e_Turn_Result resOne = m_pFighters[0]->use(m_pFighters[1]->getFighterData(), m_pFighters[1]->getCurrentMove());
+	e_Turn_Result resTwo = m_pFighters[1]->use(m_pFighters[0]->getFighterData(), m_pFighters[0]->getCurrentMove());
 
 	m_pFighters[0]->rest();
 	m_pFighters[1]->rest();

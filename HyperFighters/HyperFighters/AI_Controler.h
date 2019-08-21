@@ -13,26 +13,26 @@ public:
 	~C_AI_Controler();
 
 	C_Move* input(C_Move** moves);
-	void result(eResult res, C_Move * vsMove);
-	void receveResult(eAI_Result res, eAI_Type type);
+	void result(e_Turn_Result res, C_Move * vsMove);
+	void receveResult(e_AI_Turn_Result res, e_AI_Attack_Type type);
 
 protected:
 
 	int predictMoveConfidence();
 
-	eAI_Type findLowest();
-	eAI_Type findHighest();
+	e_AI_Attack_Type findLowest();
+	e_AI_Attack_Type findHighest();
 
 	C_Move* useAttack(C_Move** moves);
 	C_Move* useBlock(C_Move** moves);
 	C_Move* useThrow(C_Move** moves);
 
 	// TODO change these to arrays
-	std::list <eResult> m_eResults;
+	std::list <e_Turn_Result> m_eResults;
 	std::list <C_Move*> m_moves;
 
-	eAI_Type m_previousType;
-	eAI_Result m_previousResult;
+	e_AI_Attack_Type m_previousType;
+	e_AI_Turn_Result m_previousResult;
 
 	int m_defaultMove;
 

@@ -6,7 +6,7 @@
 class C_FenrirBase : public C_FighterBase
 {
 public:
-	C_FenrirBase(e_controlerType controler);
+	C_FenrirBase(e_Player_Type controler);
 	~C_FenrirBase();
 };
 

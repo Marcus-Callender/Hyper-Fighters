@@ -27,7 +27,7 @@ private:
 class C_RushBase : public C_FighterBase
 {
 public:
-	C_RushBase(e_controlerType controler);
+	C_RushBase(e_Player_Type controler);
 	~C_RushBase();
 
 	std::string status();

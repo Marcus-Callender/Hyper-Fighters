@@ -1,3 +1,7 @@
+// PlayerControler.h
+// Derived from C_Controler
+// This is a simple script that passes player's inputs to the charicter they are using
+
 #ifndef __PLAYER_CONTROLER_H__
 #define __PLAYER_CONTROLER_H__
 

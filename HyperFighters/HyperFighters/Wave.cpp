@@ -1,6 +1,6 @@
 #include "Wave.h"
 
-C_WaveBase::C_WaveBase(e_controlerType controler) : C_FighterBase::C_FighterBase(controler)
+C_WaveBase::C_WaveBase(e_Player_Type controler) : C_FighterBase::C_FighterBase(controler)
 {
 	m_pFighterData = new C_WaveData();
 
