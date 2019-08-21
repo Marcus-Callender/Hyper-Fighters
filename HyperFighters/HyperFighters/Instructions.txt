@@ -1,0 +1,17 @@
+Attacks beat throws.
+Moves 1 & 2 will always be attacks.
+Throws beat defending.
+Move 3 will always be an Throw.
+Defending beats Attacks.
+Moves 4 & 5 will always be a defensive action.
+
+When you're focus reaches 100 you will be able to use you're hyper move.
+You can increse you're focus by sucsesfuly blocking and parying attacks.
+You will also gain some focus by dealing and receving damage.
+
+Rush, Lance & Fenrir use an attacking hyper.
+Tarja & Dash have a hyper throws.
+Wave has a defencive, counter hyper.
+DSPD_017 activates a powered up state for a unique type of hyper.
+
+Press any key to continue >
