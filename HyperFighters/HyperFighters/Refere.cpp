@@ -29,12 +29,6 @@ C_Refere::~C_Refere()
 	}
 }
 
-/*void C_Refere::SetFighters(C_Entity * pEntities[2])
-{
-	//m_pEntities[0] = pEntities[0];
-	//m_pEntities[1] = pEntities[1];
-}*/
-
 void C_Refere::Start()
 {
 	if (m_pFighters[0] && m_pFighters[1])
@@ -63,13 +57,6 @@ void C_Refere::Start()
 
 		HUD();
 		m_pFighters[0]->input();
-
-		//CHANGE
-		/*
-		do {
-		HUD();
-		} while(m_pFighters[0]->input());
-		*/
 
 		system("cls");
 

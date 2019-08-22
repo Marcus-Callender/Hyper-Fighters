@@ -36,8 +36,6 @@ void C_DashBase::win(C_FighterData * vs, C_Move * vsMove)
 
 void C_DashBase::input()
 {
-	//m_pControler->input(m_pLuckyData->SetMoves(m_pMoves, m_pLuckyMoves));
-
 	C_Move* move[6];
 
 	for (int z = 0; z < 6; z++)
@@ -110,23 +108,3 @@ int C_DashLuckyMoves::GetLuckyMove()
 {
 	return m_luckyMove;
 }
-
-//C_Move ** C_DashLuckyMoves::SetMoves(C_Move ** normal, C_Move ** lucky)
-//{
-//	C_Move* toReturn[6];
-//
-//	for (int z = 0; z < 6; z++)
-//	{
-//		if (z == m_luckyMove)
-//		{
-//			toReturn[z] = lucky[z];
-//		}
-//		else
-//		{
-//			toReturn[z] = normal[z];
-//		}
-//	}
-//
-//	return toReturn;
-//}
-

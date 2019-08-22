@@ -39,13 +39,11 @@ protected:
 
 	int m_hp;
 	int m_previousHP;
-	//int m_maxHP;
 	std::string m_name;
 	int m_focus;
 	int m_maxFocus;
 	int m_previousFocus;
 	bool m_knockedDown;
-	//void* m_pStatus;
 	C_Status* m_pStatuses[3];
 };
 

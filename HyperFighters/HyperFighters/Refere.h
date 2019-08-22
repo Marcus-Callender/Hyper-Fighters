@@ -16,7 +16,6 @@ public:
 	C_Refere();
 	~C_Refere();
 
-	//void SetFighters(C_Entity* pEntities[2]);
 	void Start();
 
 	void InitializeControlers(e_Player_Type type0, e_Player_Type type1);
@@ -27,8 +26,6 @@ private:
 	void HUD();
 	void evaluate();
 	void end();
-
-	//C_Entity* m_pEntities[2];
 
 	e_Player_Type m_controler[2];
 	C_FighterBase* m_pFighters[2];

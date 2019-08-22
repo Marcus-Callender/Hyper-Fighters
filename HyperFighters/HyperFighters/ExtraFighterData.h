@@ -31,8 +31,6 @@ public:
 	int getHeatLevel();
 	std::string getHeatString();
 
-	//int getHeatLevel();
-
 private:
 	int m_heatLevel;
 	int m_maxHeat;
@@ -66,7 +64,6 @@ public:
 	void Reset();
 	void SetLuckyMove();
 	int GetLuckyMove();
-	//C_Move** SetMoves(C_Move** normal, C_Move** lucky);
 
 private:
 	int m_luckyMove;
