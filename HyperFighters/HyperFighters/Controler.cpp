@@ -10,7 +10,7 @@ C_Controler::~C_Controler()
 {
 }
 
-void C_Controler::result(eResult res, C_Move * vsMove)
+void C_Controler::result(e_Turn_Result res, C_Move * vsMove)
 {
 }
 
@@ -19,7 +19,7 @@ void C_Controler::setFighter(C_FighterData * player)
 	m_pPlayer = player;
 }
 
-void C_Controler::receveResult(eAI_Result res, eAI_Type type)
+void C_Controler::receveResult(e_AI_Turn_Result res, e_AI_Type type)
 {
 }
 

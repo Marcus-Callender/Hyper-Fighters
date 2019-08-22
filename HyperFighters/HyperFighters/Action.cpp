@@ -2,7 +2,7 @@
 
 #include "Enums.h"
 
-C_Action::C_Action(int damage, float speed, double focusGain, std::string name, C_FighterData* pMe, eType type, unsigned int flag)
+C_Action::C_Action(int damage, float speed, double focusGain, std::string name, C_FighterData* pMe, e_Attack_Type type, unsigned int flag)
 {
 	m_damage = damage;
 	m_speed = speed;
@@ -18,7 +18,7 @@ C_Action::~C_Action()
 {
 }
 
-eResult C_Action::use(C_FighterData * vs, C_Action * vsMove)
+e_Turn_Result C_Action::use(C_FighterData * vs, C_Action * vsMove)
 {
 	if (m_myFlag & BIT_USE_L_ATTACK)
 		return UseLAttack(vs, vsMove);
@@ -38,7 +38,7 @@ eResult C_Action::use(C_FighterData * vs, C_Action * vsMove)
 	else if (m_myFlag & BIT_USE_ARMOUR)
 		return UseArmour(vs, vsMove);
 
-	return SP_LOSE;
+	return SPECIAL_LOSE;
 }
 
 void C_Action::win(C_FighterData * vs, C_Action * vsMove)
@@ -84,38 +84,38 @@ float C_Action::getSpeed()
 	return m_speed;
 }
 
-eType C_Action::getType()
+e_Attack_Type C_Action::getType()
 {
 	return m_type;
 }
 
-eResult C_Action::UseLAttack(C_FighterData * vs, C_Action * vsMove)
+e_Turn_Result C_Action::UseLAttack(C_FighterData * vs, C_Action * vsMove)
 {
-	return eResult();
+	return e_Turn_Result();
 }
 
-eResult C_Action::UseHAttack(C_FighterData * vs, C_Action * vsMove)
+e_Turn_Result C_Action::UseHAttack(C_FighterData * vs, C_Action * vsMove)
 {
-	return eResult();
+	return e_Turn_Result();
 }
 
-eResult C_Action::UseThrow(C_FighterData * vs, C_Action * vsMove)
+e_Turn_Result C_Action::UseThrow(C_FighterData * vs, C_Action * vsMove)
 {
-	return eResult();
+	return e_Turn_Result();
 }
 
-eResult C_Action::UseBlock(C_FighterData * vs, C_Action * vsMove)
+e_Turn_Result C_Action::UseBlock(C_FighterData * vs, C_Action * vsMove)
 {
-	return eResult();
+	return e_Turn_Result();
 }
 
-eResult C_Action::UseCounter(C_FighterData * vs, C_Action * vsMove)
+e_Turn_Result C_Action::UseCounter(C_FighterData * vs, C_Action * vsMove)
 {
-	return eResult();
+	return e_Turn_Result();
 }
 
-eResult C_Action::UseArmour(C_FighterData * vs, C_Action * vsMove)
+e_Turn_Result C_Action::UseArmour(C_FighterData * vs, C_Action * vsMove)
 {
-	return eResult();
+	return e_Turn_Result();
 }
 

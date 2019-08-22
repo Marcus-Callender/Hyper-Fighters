@@ -29,7 +29,7 @@ std::string C_RushHeatLevel::getHeatString()
 	return " (heat: " + std::to_string(m_heatLevel) + ")";
 }*/
 
-C_RushBase::C_RushBase(e_controlerType controler) : C_FighterBase::C_FighterBase(controler)
+C_RushBase::C_RushBase(e_Player_Type controler) : C_FighterBase::C_FighterBase(controler)
 {
 	m_heatLevel = new C_RushHeatLevel();
 
@@ -41,8 +41,8 @@ C_RushBase::C_RushBase(e_controlerType controler) : C_FighterBase::C_FighterBase
 	m_pMoves[1] = new C_L_attack(15, 1.0f, false, 8.0, "Light attack", m_pFighterData);
 	m_pMoves[2] = new C_H_attack(23, 2.0f, false, 13.0, "Heavy attack", m_pFighterData);
 	m_pMoves[3] = new C_throw(25, 3.0f, true, 18.0, "Throw", m_pFighterData);
-	m_pMoves[4] = new C_parry(10, 0.0f, false, 2.0, "Light parry", m_pFighterData, L_ATTACK);
-	m_pMoves[5] = new C_parry(20, 0.0f, false, 2.2, "Heavy parry", m_pFighterData, H_ATTACK);
+	m_pMoves[4] = new C_parry(10, 0.0f, false, 2.0, "Light parry", m_pFighterData, LIGHT_ATTACK);
+	m_pMoves[5] = new C_parry(20, 0.0f, false, 2.2, "Heavy parry", m_pFighterData, HEAVY_ATTACK);
 
 	m_pCurrentMove = m_pMoves[1];
 }

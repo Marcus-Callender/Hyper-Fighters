@@ -1,3 +1,8 @@
+// Refere.h
+// This is the script that handles the combat logic between the two charicters,
+// e.g. finding the results of two actions or if a player has won
+// This script also writes the results of a turn to the screen
+
 #ifndef __REFERE_H__
 #define __REFERE_H__
 
@@ -14,8 +19,8 @@ public:
 	//void SetFighters(C_Entity* pEntities[2]);
 	void Start();
 
-	void InitializeControlers(e_controlerType type0, e_controlerType type1);
-	void InitializeCharicter(int z, e_charicterType charicter);
+	void InitializeControlers(e_Player_Type type0, e_Player_Type type1);
+	void InitializeCharicter(int z, e_Charicter_Type charicter);
 
 private:
 	std::string UI();
@@ -25,7 +30,7 @@ private:
 
 	//C_Entity* m_pEntities[2];
 
-	e_controlerType m_controler[2];
+	e_Player_Type m_controler[2];
 	C_FighterBase* m_pFighters[2];
 };
 

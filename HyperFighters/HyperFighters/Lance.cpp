@@ -38,7 +38,7 @@ std::string C_LanceCharge::getChargeString()
 	}
 }*/
 
-C_LanceBase::C_LanceBase(e_controlerType controler) : C_FighterBase::C_FighterBase(controler)
+C_LanceBase::C_LanceBase(e_Player_Type controler) : C_FighterBase::C_FighterBase(controler)
 {
 	m_charge = new C_LanceCharge();
 

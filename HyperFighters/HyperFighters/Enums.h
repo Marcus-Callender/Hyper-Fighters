@@ -1,33 +1,36 @@
+// Enums.h
+// These are all the enums used throughtout the games code.
+
 #ifndef __ENUMS_H__
 #define __ENUMS_H__
 
-enum eResult
+enum e_Turn_Result
 {
-	SP_LOSE,
+	SPECIAL_LOSE,
 	LOSE,
 	WIN,
-	SP_WIN
+	SPECIAL_WIN
 };
 
-enum eType
+enum e_Attack_Type
 {
-	L_ATTACK,
-	H_ATTACK,
+	LIGHT_ATTACK,
+	HEAVY_ATTACK,
 	THROW,
 	BLOCK,
 	DODGE
 };
 
-enum eAI_Result
+enum e_AI_Turn_Result
 {
 	AI_LOSE,
 	AI_DRAW,
 	AI_WIN,
-	AI_RES_TOTAL,
-	AI_RES_NULL
+	AI_ATTACK_TYPE_TOTAL,
+	AI_ATTACK_TYPE_NULL
 };
 
-enum eAI_Type
+enum e_AI_Type
 {
 	AI_ATTACK,
 	AI_BLOCK,
@@ -36,13 +39,13 @@ enum eAI_Type
 	AI_TYPE_NULL
 };
 
-enum e_controlerType
+enum e_Player_Type
 {
 	TYPE_PLAYER,
 	TYPE_AI
 };
 
-enum e_charicterType
+enum e_Charicter_Type
 {
 	TYPE_RUSH,
 	TYPE_LANCE,
@@ -53,8 +56,9 @@ enum e_charicterType
 	TYPE_FENRIR
 };
 
-enum e_bitTypes
+enum e_Turn_Results
 {
+	// These are given to the AI once the turn ends so it can predict better
 	BIT_USE_L_ATTACK			= 1 << 0,
 	BIT_USE_H_ATTACK			= 1 << 1,
 	BIT_USE_THROW				= 1 << 2,

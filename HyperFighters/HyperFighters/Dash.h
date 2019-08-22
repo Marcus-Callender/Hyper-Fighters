@@ -22,7 +22,7 @@ private:
 class C_DashBase : public C_FighterBase
 {
 public:
-	C_DashBase(e_controlerType controler);
+	C_DashBase(e_Player_Type controler);
 	~C_DashBase();
 
 	void win(C_FighterData* vs, C_Move* vsMove);

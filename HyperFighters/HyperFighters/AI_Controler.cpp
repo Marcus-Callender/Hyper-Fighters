@@ -8,7 +8,7 @@ C_AI_Controler::C_AI_Controler()
 {
 	for (int z = 0; z < AI_TYPE_TOTAL; z++)
 	{
-		for (int x = 0; x < AI_RES_TOTAL; x++)
+		for (int x = 0; x < AI_ATTACK_TYPE_TOTAL; x++)
 		{
 			for (int c = 0; c < AI_TYPE_TOTAL; c++)
 			{
@@ -17,7 +17,7 @@ C_AI_Controler::C_AI_Controler()
 		}
 	}
 
-	m_previousResult = AI_RES_NULL;
+	m_previousResult = AI_ATTACK_TYPE_NULL;
 	m_previousType = AI_TYPE_NULL;
 
 	m_defaultMove = 1;
@@ -62,7 +62,7 @@ C_AI_Controler::~C_AI_Controler()
 
 	for (int z = 0; z < AI_TYPE_TOTAL; z++)
 	{
-		for (int x = 0; x < AI_RES_TOTAL; x++)
+		for (int x = 0; x < AI_ATTACK_TYPE_TOTAL; x++)
 		{
 			for (int c = 0; c < AI_TYPE_TOTAL; c++)
 			{
@@ -86,7 +86,7 @@ C_Move * C_AI_Controler::input(C_Move ** moves)
 	}
 	else if (predictions == 2)
 	{
-		eAI_Type lowest = findLowest();
+		e_AI_Type lowest = findLowest();
 
 		if (lowest == AI_ATTACK)
 		{
@@ -103,7 +103,7 @@ C_Move * C_AI_Controler::input(C_Move ** moves)
 	}
 	else if (predictions == 1)
 	{
-		eAI_Type highist = findHighest();
+		e_AI_Type highist = findHighest();
 
 		if (highist == AI_ATTACK)
 		{
@@ -125,15 +125,15 @@ C_Move * C_AI_Controler::input(C_Move ** moves)
 	return toReturn;
 }
 
-void C_AI_Controler::result(eResult res, C_Move * vsMove)
+void C_AI_Controler::result(e_Turn_Result res, C_Move * vsMove)
 {
 	m_eResults.push_back(res);
 	m_moves.push_back(vsMove);
 }
 
-void C_AI_Controler::receveResult(eAI_Result res, eAI_Type type)
+void C_AI_Controler::receveResult(e_AI_Turn_Result res, e_AI_Type type)
 {
-	if (m_previousType != AI_TYPE_NULL && m_previousResult != AI_RES_NULL)
+	if (m_previousType != AI_TYPE_NULL && m_previousResult != AI_ATTACK_TYPE_NULL)
 	{
 		m_data[m_previousType][m_previousResult][type]++;
 	}
@@ -164,30 +164,30 @@ int C_AI_Controler::predictMoveConfidence()
 	return 0;
 }
 
-eAI_Type C_AI_Controler::findLowest()
+e_AI_Type C_AI_Controler::findLowest()
 {
-	eAI_Type lowest = AI_ATTACK;
+	e_AI_Type lowest = AI_ATTACK;
 
 	for (int z = 1; z < AI_TYPE_TOTAL; z++)
 	{
 		if (m_data[m_previousType][m_previousResult][z] < m_data[m_previousType][m_previousResult][lowest])
 		{
-			lowest = (eAI_Type)z;
+			lowest = (e_AI_Type)z;
 		}
 	}
 
 	return lowest;
 }
 
-eAI_Type C_AI_Controler::findHighest()
+e_AI_Type C_AI_Controler::findHighest()
 {
-	eAI_Type highest = AI_ATTACK;
+	e_AI_Type highest = AI_ATTACK;
 
 	for (int z = 1; z < AI_TYPE_TOTAL; z++)
 	{
 		if (m_data[m_previousType][m_previousResult][z] > m_data[m_previousType][m_previousResult][highest])
 		{
-			highest = (eAI_Type)z;
+			highest = (e_AI_Type)z;
 		}
 	}
 
@@ -198,7 +198,7 @@ C_Move* C_AI_Controler::useAttack(C_Move ** moves)
 {
 	if (m_pPlayer->canUseHyperSkill())
 	{
-		if (moves[0]->getType() == L_ATTACK || moves[0]->getType() == H_ATTACK)
+		if (moves[0]->getType() == LIGHT_ATTACK || moves[0]->getType() == HEAVY_ATTACK)
 		{
 			return moves[0];
 		}
