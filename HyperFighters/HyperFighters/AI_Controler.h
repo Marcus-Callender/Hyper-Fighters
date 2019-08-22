@@ -1,3 +1,7 @@
+// AI_Controler.h
+// This uses past results to predict what the opponent will do and give the counter move to the charicter 
+// it is controling (past results are stored in "scores.txt")
+
 #ifndef __AI_CONTROLER_H__
 #define __AI_CONTROLER_H__
 

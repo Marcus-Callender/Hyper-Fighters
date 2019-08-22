@@ -1,3 +1,6 @@
+// Move.h
+// This script contains the base class C_Move and all classes that are derived from it.
+
 #ifndef __MOVE_H__
 #define __MOVE_H__
 
@@ -95,6 +98,8 @@ protected:
 	void	lose(C_FighterData* vs, C_Move* vsMove);
 };
 
+// Used by Dash and Rush
+// This move can only counter one speed of move (light or heavy)
 class C_parry : public C_Move
 {
 public:
@@ -109,6 +114,8 @@ protected:
 	e_Attack_Type m_beats;
 };
 
+// Used by Fenrir and Lance
+// This move always has a speed of 0
 class C_instantAttack : public C_H_attack
 {
 public:
@@ -117,6 +124,8 @@ public:
 	float getSpeed();
 };
 
+// Used by Wave
+// A special defencive move 
 class C_counter : public C_Move
 {
 public:
@@ -129,6 +138,8 @@ protected:
 	void	lose(C_FighterData* vs, C_Move* vsMove);
 };
 
+// Used by Tarja
+// A throw move that heals on hit and will draw with light attacks
 class C_vampireGrab :public C_throw
 {
 public:
@@ -143,6 +154,8 @@ protected:
 	int m_lifeSteal;
 };
 
+// Used by Wave
+// Gives toxic status on hit
 class C_ToxicAttack : public C_L_attack
 {
 public:
@@ -155,6 +168,8 @@ protected:
 	C_Status* m_pStatus;
 };
 
+// Used by Wave
+// Gives venom status on hit
 class C_VenomAttack : public C_H_attack
 {
 public:
@@ -167,6 +182,8 @@ protected:
 	C_Status* m_pStatus;
 };
 
+// Used by DSPD_017
+// Unique move that turns on a special form
 class C_ModeOn : public C_Move
 {
 public:
@@ -179,6 +196,9 @@ protected:
 	void	lose(C_FighterData* vs, C_Move* vsMove);
 };
 
+
+// Used by DSPD_017
+// Unique move that turns off a special form
 class C_ModeOff : public C_Move
 {
 public:
@@ -191,6 +211,8 @@ protected:
 	void	lose(C_FighterData* vs, C_Move* vsMove);
 };
 
+// Used by Rush
+// Damage increses with heat level
 class C_heatAttack : public C_L_attack
 {
 public:

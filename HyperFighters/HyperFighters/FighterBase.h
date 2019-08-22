@@ -1,3 +1,6 @@
+// FighterBase.h
+// This class provides the selected moves and handles the results of the turns.
+
 #ifndef __FIGHTER_BASE_H__
 #define __FIGHTER_BASE_H__
 

@@ -1,3 +1,6 @@
+// FighterData.h
+// This class stores the values the charicters use and is called to edit the values.
+
 #ifndef __FIGHTER_DATA_H__
 #define __FIGHTER_DATA_H__
 
