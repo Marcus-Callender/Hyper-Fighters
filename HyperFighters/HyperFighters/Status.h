@@ -1,3 +1,8 @@
+// Status.h
+// Contains the C_Status base class and classes that derive from it.
+// These are conditions that are left by some of Waves attacks
+// but could be used by other charicters in the future.
+
 #ifndef __STATUS_H__
 #define __STATUS_H__
 

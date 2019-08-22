@@ -2,22 +2,7 @@
 #define __DASH_H__
 
 #include "FighterBase.h"
-
 #include "ExtraFighterData.h"
-
-/*class C_DashLuckyMoves
-{
-public:
-	C_DashLuckyMoves();
-
-	void Reset();
-	void SetLuckyMove();
-	int GetLuckyMove();
-	C_Move** SetMoves(C_Move** normal, C_Move** lucky);
-
-private:
-	int m_luckyMove;
-};*/
 
 class C_DashBase : public C_FighterBase
 {

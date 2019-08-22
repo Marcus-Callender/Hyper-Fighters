@@ -2,7 +2,6 @@
 #define __DSPD_017_H__
 
 #include "FighterBase.h"
-
 #include "ExtraFighterData.h"
 
 class C_DSPD_017_Base : public C_FighterBase

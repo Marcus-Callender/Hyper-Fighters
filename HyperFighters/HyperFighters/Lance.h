@@ -2,22 +2,7 @@
 #define __LANCE_H__
 
 #include "FighterBase.h"
-
 #include "ExtraFighterData.h"
-
-/*class C_LanceCharge
-{
-public:
-	C_LanceCharge();
-
-	void charge();
-	void uncharge();
-	bool getCharged();
-	std::string getChargeString();
-
-private:
-	int m_charged;
-};*/
 
 class C_LanceBase : public C_FighterBase
 {

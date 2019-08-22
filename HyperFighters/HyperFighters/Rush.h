@@ -2,27 +2,7 @@
 #define __RUSH_H__
 
 #include "FighterBase.h"
-
 #include "ExtraFighterData.h"
-
-/*class C_RushHeatLevel
-{
-public:
-	C_RushHeatLevel();
-
-	void win();
-	void lose();
-	float focusMultiplyer();
-	std::string getHeatString();
-	
-	//int getHeatLevel();
-
-private:
-	int m_heatLevel;
-	int m_maxHeat;
-
-	float m_heatFocusGain = 0.2;
-};*/
 
 class C_RushBase : public C_FighterBase
 {
