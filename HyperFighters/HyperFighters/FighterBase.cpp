@@ -6,7 +6,7 @@
 
 #include <iostream>
 
-C_FighterBase::C_FighterBase(e_Player_Type controler)
+C_FighterBase::C_FighterBase(e_controlerType controler)
 {
 	if (controler == TYPE_PLAYER)
 	{
@@ -106,9 +106,9 @@ void C_FighterBase::lose(C_FighterData * vs, C_Move* vsMove)
 	m_pControler->result(LOSE, vsMove);
 }
 
-void C_FighterBase::giveResult(e_AI_Turn_Result res, e_Attack_Type type)
+void C_FighterBase::giveResult(eAI_Result res, eType type)
 {
-	e_AI_Attack_Type convertedType = AI_TYPE_NULL;
+	eAI_Type convertedType = AI_TYPE_NULL;
 
 	if (type == L_ATTACK || type == H_ATTACK)
 	{
@@ -126,7 +126,7 @@ void C_FighterBase::giveResult(e_AI_Turn_Result res, e_Attack_Type type)
 	m_pControler->receveResult(res, convertedType);
 }
 
-e_Turn_Result C_FighterBase::use(C_FighterData * vs, C_Move* vsMove)
+eResult C_FighterBase::use(C_FighterData * vs, C_Move* vsMove)
 {
 	return m_pCurrentMove->use(vs, vsMove);
 }

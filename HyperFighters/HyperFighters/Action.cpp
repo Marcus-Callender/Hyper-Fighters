@@ -2,7 +2,7 @@
 
 #include "Enums.h"
 
-C_Action::C_Action(int damage, float speed, double focusGain, std::string name, C_FighterData* pMe, e_Attack_Type type, unsigned int flag)
+C_Action::C_Action(int damage, float speed, double focusGain, std::string name, C_FighterData* pMe, eType type, unsigned int flag)
 {
 	m_damage = damage;
 	m_speed = speed;
@@ -18,7 +18,7 @@ C_Action::~C_Action()
 {
 }
 
-e_Turn_Result C_Action::use(C_FighterData * vs, C_Action * vsMove)
+eResult C_Action::use(C_FighterData * vs, C_Action * vsMove)
 {
 	if (m_myFlag & BIT_USE_L_ATTACK)
 		return UseLAttack(vs, vsMove);
@@ -84,38 +84,38 @@ float C_Action::getSpeed()
 	return m_speed;
 }
 
-e_Attack_Type C_Action::getType()
+eType C_Action::getType()
 {
 	return m_type;
 }
 
-e_Turn_Result C_Action::UseLAttack(C_FighterData * vs, C_Action * vsMove)
+eResult C_Action::UseLAttack(C_FighterData * vs, C_Action * vsMove)
 {
-	return e_Turn_Result();
+	return eResult();
 }
 
-e_Turn_Result C_Action::UseHAttack(C_FighterData * vs, C_Action * vsMove)
+eResult C_Action::UseHAttack(C_FighterData * vs, C_Action * vsMove)
 {
-	return e_Turn_Result();
+	return eResult();
 }
 
-e_Turn_Result C_Action::UseThrow(C_FighterData * vs, C_Action * vsMove)
+eResult C_Action::UseThrow(C_FighterData * vs, C_Action * vsMove)
 {
-	return e_Turn_Result();
+	return eResult();
 }
 
-e_Turn_Result C_Action::UseBlock(C_FighterData * vs, C_Action * vsMove)
+eResult C_Action::UseBlock(C_FighterData * vs, C_Action * vsMove)
 {
-	return e_Turn_Result();
+	return eResult();
 }
 
-e_Turn_Result C_Action::UseCounter(C_FighterData * vs, C_Action * vsMove)
+eResult C_Action::UseCounter(C_FighterData * vs, C_Action * vsMove)
 {
-	return e_Turn_Result();
+	return eResult();
 }
 
-e_Turn_Result C_Action::UseArmour(C_FighterData * vs, C_Action * vsMove)
+eResult C_Action::UseArmour(C_FighterData * vs, C_Action * vsMove)
 {
-	return e_Turn_Result();
+	return eResult();
 }
 

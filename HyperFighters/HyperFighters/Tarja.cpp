@@ -1,6 +1,6 @@
 #include "Tarja.h"
 
-C_TarjaBase::C_TarjaBase(e_Player_Type controler) : C_FighterBase::C_FighterBase(controler)
+C_TarjaBase::C_TarjaBase(e_controlerType controler) : C_FighterBase::C_FighterBase(controler)
 {
 	m_pFighterData = new C_TarjaData();
 

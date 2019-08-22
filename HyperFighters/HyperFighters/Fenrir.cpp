@@ -1,6 +1,6 @@
 #include "Fenrir.h"
 
-C_FenrirBase::C_FenrirBase(e_Player_Type controler) : C_FighterBase::C_FighterBase(controler)
+C_FenrirBase::C_FenrirBase(e_controlerType controler) : C_FighterBase::C_FighterBase(controler)
 {
 	m_pFighterData = new C_FenrirData();
 

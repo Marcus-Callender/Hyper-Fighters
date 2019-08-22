@@ -6,7 +6,7 @@
 class C_WaveBase : public C_FighterBase
 {
 public:
-	C_WaveBase(e_Player_Type controler);
+	C_WaveBase(e_controlerType controler);
 	~C_WaveBase();
 };
 

@@ -8,7 +8,7 @@
 class C_DSPD_017_Base : public C_FighterBase
 {
 public:
-	C_DSPD_017_Base(e_Player_Type controler);
+	C_DSPD_017_Base(e_controlerType controler);
 	~C_DSPD_017_Base();
 
 	void input();

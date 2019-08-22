@@ -6,7 +6,7 @@
 class C_TarjaBase : public C_FighterBase
 {
 public:
-	C_TarjaBase(e_Player_Type controler);
+	C_TarjaBase(e_controlerType controler);
 	~C_TarjaBase();
 };
 

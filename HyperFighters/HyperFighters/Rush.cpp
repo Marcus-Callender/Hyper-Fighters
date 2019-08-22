@@ -29,7 +29,7 @@ std::string C_RushHeatLevel::getHeatString()
 	return " (heat: " + std::to_string(m_heatLevel) + ")";
 }*/
 
-C_RushBase::C_RushBase(e_Player_Type controler) : C_FighterBase::C_FighterBase(controler)
+C_RushBase::C_RushBase(e_controlerType controler) : C_FighterBase::C_FighterBase(controler)
 {
 	m_heatLevel = new C_RushHeatLevel();
 

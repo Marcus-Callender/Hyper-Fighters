@@ -13,14 +13,14 @@ public:
 	C_Move(int damage, float speed, bool knockDown, double focusGain, std::string name, C_FighterData* pMe);
 	~C_Move();
 
-	virtual e_Turn_Result use(C_FighterData* vs, C_Move* vsMove) = 0;
+	virtual eResult use(C_FighterData* vs, C_Move* vsMove) = 0;
 	virtual void win(C_FighterData* vs, C_Move* vsMove) = 0;
 	virtual void lose(C_FighterData* vs, C_Move* vsMove) = 0;
 
 	std::string getInfo();
 	int	getDamage();
 	virtual float getSpeed();
-	e_Attack_Type getType();
+	eType getType();
 
 protected:
 	int m_damage;
@@ -28,7 +28,7 @@ protected:
 	bool m_knockDown;
 	double m_FocusGain;
 	std::string m_name;
-	e_Attack_Type m_type;
+	eType m_type;
 	C_FighterData* m_pMe;
 };
 
@@ -38,7 +38,7 @@ public:
 
 	C_L_attack(int damage, float speed, bool knockDown, double focusGain, std::string name, C_FighterData* pMe);
 
-	e_Turn_Result use(C_FighterData* vs, C_Move* vsMove);
+	eResult use(C_FighterData* vs, C_Move* vsMove);
 
 protected:
 
@@ -51,7 +51,7 @@ class C_H_attack : public C_Move
 public:
 	C_H_attack(int damage, float speed, bool knockDown, double focusGain, std::string name, C_FighterData* pMe);
 
-	e_Turn_Result use(C_FighterData* vs, C_Move* vsMove);
+	eResult use(C_FighterData* vs, C_Move* vsMove);
 
 protected:
 	void	win(C_FighterData* vs, C_Move* vsMove);
@@ -63,7 +63,7 @@ class C_throw : public C_Move
 public:
 	C_throw(int damage, float speed, bool knockDown, double focusGain, std::string name, C_FighterData* pMe);
 
-	e_Turn_Result use(C_FighterData* vs, C_Move* vsMove);
+	eResult use(C_FighterData* vs, C_Move* vsMove);
 
 protected:
 	void	win(C_FighterData* vs, C_Move* vsMove);
@@ -76,7 +76,7 @@ public:
 	C_block();
 	C_block(int damage, float speed, bool knockDown, double focusGain, std::string name, C_FighterData* pMe);
 
-	e_Turn_Result use(C_FighterData* vs, C_Move* vsMove);
+	eResult use(C_FighterData* vs, C_Move* vsMove);
 
 protected:
 	void	win(C_FighterData* vs, C_Move* vsMove);
@@ -88,7 +88,7 @@ class C_dodge : public C_Move
 public:
 	C_dodge(int damage, float speed, bool knockDown, double focusGain, std::string name, C_FighterData* pMe);
 
-	e_Turn_Result use(C_FighterData* vs, C_Move* vsMove);
+	eResult use(C_FighterData* vs, C_Move* vsMove);
 
 protected:
 	void	win(C_FighterData* vs, C_Move* vsMove);
@@ -98,15 +98,15 @@ protected:
 class C_parry : public C_Move
 {
 public:
-	C_parry(int damage, float speed, bool knockDown, double focusGain, std::string name, C_FighterData* pMe, e_Attack_Type parries);
+	C_parry(int damage, float speed, bool knockDown, double focusGain, std::string name, C_FighterData* pMe, eType parries);
 
-	e_Turn_Result use(C_FighterData* vs, C_Move* vsMove);
+	eResult use(C_FighterData* vs, C_Move* vsMove);
 
 protected:
 	void	win(C_FighterData* vs, C_Move* vsMove);
 	void	lose(C_FighterData* vs, C_Move* vsMove);
 
-	e_Attack_Type m_beats;
+	eType m_beats;
 };
 
 class C_instantAttack : public C_H_attack
@@ -122,7 +122,7 @@ class C_counter : public C_Move
 public:
 	C_counter(int damage, float speed, bool knockDown, double focusGain, std::string name, C_FighterData* pMe);
 
-	e_Turn_Result use(C_FighterData* vs, C_Move* vsMove);
+	eResult use(C_FighterData* vs, C_Move* vsMove);
 
 protected:
 	void	win(C_FighterData* vs, C_Move* vsMove);
@@ -134,7 +134,7 @@ class C_vampireGrab :public C_throw
 public:
 	C_vampireGrab(int damage, float speed, bool knockDown, double focusGain, std::string name, C_FighterData* pMe, int lifeSteal);
 
-	e_Turn_Result use(C_FighterData* vs, C_Move* vsMove);
+	eResult use(C_FighterData* vs, C_Move* vsMove);
 
 protected:
 	void	win(C_FighterData* vs, C_Move* vsMove);
@@ -172,7 +172,7 @@ class C_ModeOn : public C_Move
 public:
 	C_ModeOn(int damage, float speed, bool knockDown, double focusGain, std::string name, C_FighterData* pMe);
 
-	e_Turn_Result use(C_FighterData* vs, C_Move* vsMove);
+	eResult use(C_FighterData* vs, C_Move* vsMove);
 
 protected:
 	void	win(C_FighterData* vs, C_Move* vsMove);
@@ -184,7 +184,7 @@ class C_ModeOff : public C_Move
 public:
 	C_ModeOff(int damage, float speed, bool knockDown, double focusGain, std::string name, C_FighterData* pMe);
 
-	e_Turn_Result use(C_FighterData* vs, C_Move* vsMove);
+	eResult use(C_FighterData* vs, C_Move* vsMove);
 
 protected:
 	void	win(C_FighterData* vs, C_Move* vsMove);

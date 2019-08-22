@@ -1,51 +1,48 @@
-// Enums.h
-// These are all the enums used throughtout the games code.
-
 #ifndef __ENUMS_H__
 #define __ENUMS_H__
 
-enum e_Turn_Result
+enum eResult
 {
-	SPECIAL_LOSE,
+	SP_LOSE,
 	LOSE,
 	WIN,
-	SPECIAL_WIN
+	SP_WIN
 };
 
-enum e_Attack_Type
+enum eType
 {
-	LIGHT_ATTACK,
-	HEAVY_ATTACK,
+	L_ATTACK,
+	H_ATTACK,
 	THROW,
 	BLOCK,
 	DODGE
 };
 
-enum e_AI_Turn_Result
+enum eAI_Result
 {
 	AI_LOSE,
 	AI_DRAW,
 	AI_WIN,
-	AI_RESULT_TOTAL,
-	AI_RESULT_NULL
+	AI_RES_TOTAL,
+	AI_RES_NULL
 };
 
-enum e_AI_Attack_Type
+enum eAI_Type
 {
 	AI_ATTACK,
 	AI_BLOCK,
 	AI_THROW,
-	AI_ATTACK_TYPE_TOTAL,
-	AI_ATTACK_TYPE_NULL
+	AI_TYPE_TOTAL,
+	AI_TYPE_NULL
 };
 
-enum e_Player_Type
+enum e_controlerType
 {
 	TYPE_PLAYER,
 	TYPE_AI
 };
 
-enum e_Charicter_Type
+enum e_charicterType
 {
 	TYPE_RUSH,
 	TYPE_LANCE,
@@ -54,6 +51,24 @@ enum e_Charicter_Type
 	TYPE_DASH,
 	TYPE_TARJA,
 	TYPE_FENRIR
+};
+
+enum e_bitTypes
+{
+	BIT_USE_L_ATTACK			= 1 << 0,
+	BIT_USE_H_ATTACK			= 1 << 1,
+	BIT_USE_THROW				= 1 << 2,
+	BIT_USE_BLOCK				= 1 << 3,
+	BIT_USE_COUNTER				= 1 << 4,
+	BIT_USE_ARMOUR				= 1 << 5,
+
+	BIT_WIN_DAMAGE				= 1 << 6,
+	BIT_WIN_FOCUS_GAIN			= 1 << 7,
+	BIT_WIN_BLOCK_FOCUS_GAIN	= 1 << 8,
+
+	BIT_KNOCKDOWN				= 1 << 9,
+	BIT_INSTANT					= 1 << 10,
+	BIT_DISALLOW_FOCUS			= 1 << 11
 };
 
 #endif // !__ENUMS_H__

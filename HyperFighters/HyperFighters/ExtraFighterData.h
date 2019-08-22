@@ -1,6 +1,3 @@
-// ExtraFighterData.h
-// this file contains additional logic needed by some charicters.
-
 #ifndef __EXTRA_FIGHTER_DATA__
 #define __EXTRA_FIGHTER_DATA__
 

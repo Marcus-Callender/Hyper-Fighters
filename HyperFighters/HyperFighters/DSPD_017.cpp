@@ -1,6 +1,6 @@
 #include "DSPD_017.h"
 
-C_DSPD_017_Base::C_DSPD_017_Base(e_Player_Type controler) : C_FighterBase::C_FighterBase(controler)
+C_DSPD_017_Base::C_DSPD_017_Base(e_controlerType controler) : C_FighterBase::C_FighterBase(controler)
 {
 	m_pOverloadData = new C_DSPD_017_Overload();
 

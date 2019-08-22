@@ -12,7 +12,7 @@
 class C_FighterBase
 {
 public:
-	C_FighterBase(e_Player_Type controler);
+	C_FighterBase(e_controlerType controler);
 	~C_FighterBase();
 
 	virtual void initialize();
@@ -20,8 +20,8 @@ public:
 	virtual std::string status();
 	virtual void win(C_FighterData* vs, C_Move* vsMove);
 	virtual void lose(C_FighterData* vs, C_Move* vsMove);
-	void giveResult(e_AI_Turn_Result res, e_Attack_Type type);
-	e_Turn_Result use(C_FighterData* vs, C_Move* vsMove);
+	void giveResult(eAI_Result res, eType type);
+	eResult use(C_FighterData* vs, C_Move* vsMove);
 	void showInput();
 	virtual void input();
 	void giveStatus(C_Status* pStatus);

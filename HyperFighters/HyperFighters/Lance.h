@@ -22,7 +22,7 @@ private:
 class C_LanceBase : public C_FighterBase
 {
 public:
-	C_LanceBase(e_Player_Type controler);
+	C_LanceBase(e_controlerType controler);
 	~C_LanceBase();
 
 	std::string status();
