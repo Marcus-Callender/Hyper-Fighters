@@ -31,6 +31,7 @@ C_Refere::~C_Refere()
 
 void C_Refere::Start()
 {
+	// This is run at the start of the battle and differentiates two charicetrs if they are the same by adding a colour to the end of there name.
 	if (m_pFighters[0] && m_pFighters[1])
 	{
 		if (m_pFighters[0]->getFighterData()->getName() == m_pFighters[1]->getFighterData()->getName())
@@ -140,7 +141,6 @@ void C_Refere::evaluate()
 
 	e_Turn_Result resOne = m_pFighters[0]->use(m_pFighters[1]->getFighterData(), m_pFighters[1]->getCurrentMove());
 	e_Turn_Result resTwo = m_pFighters[1]->use(m_pFighters[0]->getFighterData(), m_pFighters[0]->getCurrentMove());
-
 
 	// Lets boath charicters know there move has been registered
 	m_pFighters[0]->rest();

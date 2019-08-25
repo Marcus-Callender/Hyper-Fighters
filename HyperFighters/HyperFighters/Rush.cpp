@@ -1,34 +1,5 @@
 #include "Rush.h"
 
-/*C_RushHeatLevel::C_RushHeatLevel()
-{
-	m_heatLevel = 0;
-	m_maxHeat = 5;
-}
-
-void C_RushHeatLevel::win()
-{
-	m_heatLevel++;
-
-	if (m_heatLevel > m_maxHeat)
-		m_heatLevel = m_maxHeat;
-}
-
-void C_RushHeatLevel::lose()
-{
-	m_heatLevel = 0;
-}
-
-float C_RushHeatLevel::focusMultiplyer()
-{
-	return 1.0f + (m_heatFocusGain * m_heatLevel);
-}
-
-std::string C_RushHeatLevel::getHeatString()
-{
-	return " (heat: " + std::to_string(m_heatLevel) + ")";
-}*/
-
 C_RushBase::C_RushBase(e_Player_Type controler) : C_FighterBase::C_FighterBase(controler)
 {
 	m_heatLevel = new C_RushHeatLevel();
