@@ -50,8 +50,8 @@ C_LanceBase::C_LanceBase(e_Player_Type controler) : C_FighterBase::C_FighterBase
 	m_pMoves[1] = new C_L_attack(18, 1.0f, false, 6.0, "Weak punch", m_pFighterData);
 	m_pMoves[2] = new C_H_attack(23, 2.0f, false, 15.0, "Strong kick", m_pFighterData);
 	m_pMoves[3] = new C_throw(27, 3.0f, true, 13.0, "Grab", m_pFighterData);
-	m_pMoves[4] = new C_block(0.0f, 0.0f, false, 2.0, "Block", m_pFighterData);
-	m_pMoves[5] = new C_dodge(7.0f, 0.0f, false, 0.2, "Evade", m_pFighterData);
+	m_pMoves[4] = new C_block(0, 0.0f, false, 2.0, "Block", m_pFighterData);
+	m_pMoves[5] = new C_dodge(0, 0.0f, false, 0.2, "Evade", m_pFighterData);
 
 	m_pCurrentMove = m_pMoves[5];
 }

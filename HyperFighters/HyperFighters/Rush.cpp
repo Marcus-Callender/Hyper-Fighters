@@ -103,7 +103,7 @@ void C_RushData::takeDamage(int ammount, bool gainMeter)
 
 void C_RushData::gainFocus(int ammount)
 {
-	m_focus += ammount * m_heatLevel->focusMultiplyer();
+	m_focus += (int)((float)ammount * m_heatLevel->focusMultiplyer());
 
 	if (m_focus > 100)
 		m_focus = 100;
