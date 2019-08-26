@@ -18,7 +18,6 @@ public:
 
 	virtual e_Turn_Result use(C_FighterData* vs, C_Move* vsMove) = 0;
 	virtual void win(C_FighterData* vs, C_Move* vsMove) = 0;
-	virtual void lose(C_FighterData* vs, C_Move* vsMove) = 0;
 
 	std::string getInfo();
 	int	getDamage();
@@ -46,7 +45,6 @@ public:
 protected:
 
 	void	win(C_FighterData* vs, C_Move* vsMove);
-	void	lose(C_FighterData* vs, C_Move* vsMove);
 };
 
 class C_H_attack : public C_Move
@@ -58,7 +56,6 @@ public:
 
 protected:
 	void	win(C_FighterData* vs, C_Move* vsMove);
-	void	lose(C_FighterData* vs, C_Move* vsMove);
 };
 
 class C_throw : public C_Move
@@ -70,7 +67,6 @@ public:
 
 protected:
 	void	win(C_FighterData* vs, C_Move* vsMove);
-	void	lose(C_FighterData* vs, C_Move* vsMove);
 };
 
 class C_block : public C_Move
@@ -83,7 +79,6 @@ public:
 
 protected:
 	void	win(C_FighterData* vs, C_Move* vsMove);
-	void	lose(C_FighterData* vs, C_Move* vsMove);
 };
 
 class C_dodge : public C_Move
@@ -95,7 +90,6 @@ public:
 
 protected:
 	void	win(C_FighterData* vs, C_Move* vsMove);
-	void	lose(C_FighterData* vs, C_Move* vsMove);
 };
 
 // Used by Dash and Rush
@@ -109,7 +103,6 @@ public:
 
 protected:
 	void	win(C_FighterData* vs, C_Move* vsMove);
-	void	lose(C_FighterData* vs, C_Move* vsMove);
 
 	e_Attack_Type m_beats;
 };
@@ -135,7 +128,6 @@ public:
 
 protected:
 	void	win(C_FighterData* vs, C_Move* vsMove);
-	void	lose(C_FighterData* vs, C_Move* vsMove);
 };
 
 // Used by Tarja
@@ -149,7 +141,6 @@ public:
 
 protected:
 	void	win(C_FighterData* vs, C_Move* vsMove);
-	void	lose(C_FighterData* vs, C_Move* vsMove);
 
 	int m_lifeSteal;
 };
@@ -193,7 +184,6 @@ public:
 
 protected:
 	void	win(C_FighterData* vs, C_Move* vsMove);
-	void	lose(C_FighterData* vs, C_Move* vsMove);
 };
 
 
@@ -208,7 +198,6 @@ public:
 
 protected:
 	void	win(C_FighterData* vs, C_Move* vsMove);
-	void	lose(C_FighterData* vs, C_Move* vsMove);
 };
 
 // Used by Rush

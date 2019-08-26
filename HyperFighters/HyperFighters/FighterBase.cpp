@@ -101,8 +101,6 @@ void C_FighterBase::win(C_FighterData * vs, C_Move* vsMove)
 
 void C_FighterBase::lose(C_FighterData * vs, C_Move* vsMove)
 {
-	m_pCurrentMove->lose(vs, vsMove);
-
 	m_pControler->result(LOSE, vsMove);
 }
 

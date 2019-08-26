@@ -90,10 +90,6 @@ void C_L_attack::win(C_FighterData * vs, C_Move* vsMove)
 		vs->knockDown();
 }
 
-void C_L_attack::lose(C_FighterData * vs, C_Move* vsMove)
-{
-}
-
 C_H_attack::C_H_attack(int damage, float speed, bool knockDown, double focusGain, std::string name, C_FighterData * pMe) : C_Move(damage, speed, knockDown, focusGain, name, pMe)
 {
 	m_type = HEAVY_ATTACK;
@@ -135,10 +131,6 @@ void C_H_attack::win(C_FighterData * vs, C_Move* vsMove)
 
 	if (m_knockDown)
 		vs->knockDown();
-}
-
-void C_H_attack::lose(C_FighterData * vs, C_Move* vsMove)
-{
 }
 
 C_throw::C_throw(int damage, float speed, bool knockDown, double focusGain, std::string name, C_FighterData * pMe) : C_Move(damage, speed, knockDown, focusGain, name, pMe)
@@ -184,10 +176,6 @@ void C_throw::win(C_FighterData * vs, C_Move* vsMove)
 		vs->knockDown();
 }
 
-void C_throw::lose(C_FighterData * vs, C_Move* vsMove)
-{
-}
-
 C_block::C_block()
 {
 	m_type = BLOCK;
@@ -227,10 +215,6 @@ void C_block::win(C_FighterData * vs, C_Move* vsMove)
 		vs->knockDown();
 }
 
-void C_block::lose(C_FighterData * vs, C_Move* vsMove)
-{
-}
-
 C_dodge::C_dodge(int damage, float speed, bool knockDown, double focusGain, std::string name, C_FighterData * pMe) : C_Move(damage, speed, knockDown, focusGain, name, pMe)
 {
 	m_type = DODGE;
@@ -264,10 +248,6 @@ void C_dodge::win(C_FighterData * vs, C_Move * vsMove)
 
 	if (m_knockDown)
 		vs->knockDown();
-}
-
-void C_dodge::lose(C_FighterData * vs, C_Move * vsMove)
-{
 }
 
 C_parry::C_parry(int damage, float speed, bool knockDown, double focusGain, std::string name, C_FighterData * pMe, e_Attack_Type parries) : C_Move(damage, speed, knockDown, focusGain, name, pMe)
@@ -314,10 +294,6 @@ void C_parry::win(C_FighterData * vs, C_Move * vsMove)
 		vs->knockDown();
 }
 
-void C_parry::lose(C_FighterData * vs, C_Move * vsMove)
-{
-}
-
 C_instantAttack::C_instantAttack(int damage, float speed, bool knockDown, double focusGain, std::string name, C_FighterData * pMe) : C_H_attack(damage, speed, knockDown, focusGain, name, pMe)
 {
 	m_type = HEAVY_ATTACK;
@@ -361,10 +337,6 @@ void C_counter::win(C_FighterData * vs, C_Move * vsMove)
 
 	if (m_knockDown)
 		vs->knockDown();
-}
-
-void C_counter::lose(C_FighterData * vs, C_Move * vsMove)
-{
 }
 
 C_vampireGrab::C_vampireGrab(int damage, float speed, bool knockDown, double focusGain, std::string name, C_FighterData * pMe, int lifeSteal) : C_throw(damage, speed, knockDown, focusGain, name, pMe)
@@ -415,10 +387,6 @@ void C_vampireGrab::win(C_FighterData * vs, C_Move * vsMove)
 		vs->knockDown();
 }
 
-void C_vampireGrab::lose(C_FighterData * vs, C_Move * vsMove)
-{
-}
-
 C_ToxicAttack::C_ToxicAttack(int damage, float speed, bool knockDown, double focusGain, std::string name, C_FighterData * pMe, C_Status * pStatus) : C_L_attack(damage, speed, knockDown, focusGain, name, pMe)
 {
 	m_pStatus = pStatus;
@@ -466,11 +434,6 @@ e_Turn_Result C_ModeOn::use(C_FighterData* vs, C_Move* vsMove)
 
 void C_ModeOn::win(C_FighterData* vs, C_Move* vsMove)
 {
-	//m_pMe->misc(true);
-}
-
-void C_ModeOn::lose(C_FighterData* vs, C_Move* vsMove)
-{
 }
 
 C_ModeOff::C_ModeOff(int damage, float speed, bool knockDown, double focusGain, std::string name, C_FighterData * pMe) : C_Move(damage, speed, knockDown, focusGain, name, pMe)
@@ -496,12 +459,6 @@ e_Turn_Result C_ModeOff::use(C_FighterData* vs, C_Move* vsMove)
 
 void C_ModeOff::win(C_FighterData* vs, C_Move* vsMove)
 {
-	//m_pMe->misc(false);
-}
-
-void C_ModeOff::lose(C_FighterData* vs, C_Move* vsMove)
-{
-	//m_pMe->misc(false);
 }
 
 C_heatAttack::C_heatAttack(int damage, float speed, bool knockDown, double focusGain, std::string name, C_FighterData * pMe, C_RushHeatLevel * pHeatLevel) : C_L_attack(damage, speed, knockDown, focusGain, name, pMe)
