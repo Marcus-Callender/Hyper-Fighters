@@ -81,6 +81,9 @@
     <ClInclude Include="Entity.h">
       <Filter>Header Files\Legacy</Filter>
     </ClInclude>
+    <ClInclude Include="ExtraFighterData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="FighterData.cpp">
@@ -110,9 +113,6 @@
     <ClCompile Include="Status.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Action.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Rush.cpp">
       <Filter>Source Files\Charicters</Filter>
     </ClCompile>
@@ -134,8 +134,8 @@
     <ClCompile Include="Fenrir.cpp">
       <Filter>Source Files\Charicters</Filter>
     </ClCompile>
-    <ClCompile Include="Entity.cpp">
-      <Filter>Source Files\Legacy</Filter>
+    <ClCompile Include="ExtraFighterData.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
