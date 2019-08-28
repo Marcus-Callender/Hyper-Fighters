@@ -5,6 +5,7 @@
 #define __FIGHTER_DATA_H__
 
 #include <string>
+#include "Enums.h"
 
 class C_Status;
 
