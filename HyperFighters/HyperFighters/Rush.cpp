@@ -55,7 +55,7 @@ std::string C_RushBase::status()
 
 	statString += m_heatLevel->getHeatString();
 
-	for (int z = 0; z < 3; z++)
+	for (int z = 0; z < NUMBER_OF_STATUSES; z++)
 	{
 		if (m_pStatuses[z] != nullptr) {
 			statString += m_pStatuses[z]->giveSymbol();
@@ -89,7 +89,7 @@ C_RushData::C_RushData() : C_FighterData::C_FighterData()
 	m_previousHP = m_hp;
 	m_previousFocus = m_focus;
 
-	for (int z = 0; z < 3; z++) {
+	for (int z = 0; z < NUMBER_OF_STATUSES; z++) {
 		m_pStatuses[z] = nullptr;
 	}
 }

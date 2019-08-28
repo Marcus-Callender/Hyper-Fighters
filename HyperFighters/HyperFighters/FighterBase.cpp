@@ -17,7 +17,7 @@ C_FighterBase::C_FighterBase(e_Player_Type controler)
 		m_pControler = new C_AI_Controler();
 	}
 
-	for (int z = 0; z < 3; z++)
+	for (int z = 0; z < NUMBER_OF_STATUSES; z++)
 	{
 		m_pStatuses[z] = nullptr;
 	}
@@ -161,7 +161,7 @@ void C_FighterBase::giveStatus(C_Status * pStatus)
 
 void C_FighterBase::removeStatus(C_Status * pStatus)
 {
-	for (int z = 0; z < 3; z++)
+	for (int z = 0; z < NUMBER_OF_STATUSES; z++)
 	{
 		if (m_pStatuses[z] == pStatus)
 		{
@@ -179,7 +179,7 @@ void C_FighterBase::RunStatus()
 {
 	SyncStatuses();
 
-	for (int z = 0; z < 3; z++)
+	for (int z = 0; z < NUMBER_OF_STATUSES; z++)
 	{
 		if (m_pStatuses[z] != nullptr)
 		{
@@ -190,7 +190,7 @@ void C_FighterBase::RunStatus()
 
 void C_FighterBase::SyncStatuses()
 {
-	for (int z = 0; z < 3; z++)
+	for (int z = 0; z < NUMBER_OF_STATUSES; z++)
 	{
 		m_pStatuses[z] = m_pFighterData->getStatus(z);
 	}

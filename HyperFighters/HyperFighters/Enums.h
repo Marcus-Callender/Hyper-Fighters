@@ -4,6 +4,8 @@
 #ifndef __ENUMS_H__
 #define __ENUMS_H__
 
+const int NUMBER_OF_STATUSES = 3;
+
 enum e_Turn_Result
 {
 	SPECIAL_LOSE,

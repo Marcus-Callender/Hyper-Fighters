@@ -139,7 +139,7 @@ void C_FighterData::giveStatus(C_Status * pStatus)
 {
 	bool alreadyHaveStatus = false;
 
-	for (int z = 0; z < 3; z++)
+	for (int z = 0; z < NUMBER_OF_STATUSES; z++)
 	{
 		if (m_pStatuses[z] == pStatus)
 		{
@@ -150,7 +150,7 @@ void C_FighterData::giveStatus(C_Status * pStatus)
 
 	if (!alreadyHaveStatus)
 	{
-		for (int z = 0; z < 3; z++)
+		for (int z = 0; z < NUMBER_OF_STATUSES; z++)
 		{
 			if (m_pStatuses[z] == nullptr)
 			{
@@ -168,13 +168,7 @@ void C_FighterData::removeStatus(int z)
 
 C_Status * C_FighterData::getStatus(int z)
 {
-	/*void* toReturn = m_pStatus;
-
-	m_pStatus = nullptr;
-
-	return toReturn;*/
-
-	if (z >= 0 && z < 3)
+	if (z >= 0 && z < NUMBER_OF_STATUSES)
 	{
 		return m_pStatuses[z];
 	}

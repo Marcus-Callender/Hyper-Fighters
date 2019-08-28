@@ -47,7 +47,7 @@ protected:
 	int m_maxFocus;
 	int m_previousFocus;
 	bool m_knockedDown;
-	C_Status* m_pStatuses[3];
+	C_Status* m_pStatuses[NUMBER_OF_STATUSES];
 };
 
 #endif // !__FIGHTER_DATA_H__

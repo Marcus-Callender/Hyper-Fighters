@@ -1,43 +1,5 @@
 #include "Lance.h"
 
-/*C_LanceCharge::C_LanceCharge()
-{
-	m_charged = 0;
-}
-
-void C_LanceCharge::charge()
-{
-	m_charged = 2;
-}
-
-void C_LanceCharge::uncharge()
-{
-	m_charged--;
-
-	if (m_charged < 0)
-		m_charged = 0;
-}
-
-bool C_LanceCharge::getCharged()
-{
-	if (m_charged > 0)
-		return true;
-
-	return false;
-}
-
-std::string C_LanceCharge::getChargeString()
-{
-	if (m_charged > 0)
-	{
-		return " (charged " + std::to_string(m_charged) + ")";
-	}
-	else
-	{
-		return " (uncharged)";
-	}
-}*/
-
 C_LanceBase::C_LanceBase(e_Player_Type controler) : C_FighterBase::C_FighterBase(controler)
 {
 	m_charge = new C_LanceCharge();
@@ -93,7 +55,7 @@ std::string C_LanceBase::status()
 
 	statString += m_charge->getChargeString();
 
-	for (int z = 0; z < 3; z++)
+	for (int z = 0; z < NUMBER_OF_STATUSES; z++)
 	{
 		if (m_pStatuses[z] != nullptr) {
 			statString += m_pStatuses[z]->giveSymbol();
@@ -130,7 +92,7 @@ C_LanceData::C_LanceData() : C_FighterData::C_FighterData()
 	m_previousHP = m_hp;
 	m_previousFocus = m_focus;
 
-	for (int z = 0; z < 3; z++) {
+	for (int z = 0; z < NUMBER_OF_STATUSES; z++) {
 		m_pStatuses[z] = nullptr;
 	}
 }

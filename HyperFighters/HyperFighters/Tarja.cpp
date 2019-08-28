@@ -26,7 +26,7 @@ C_TarjaData::C_TarjaData()
 	m_previousHP = m_hp;
 	m_previousFocus = m_focus;
 
-	for (int z = 0; z < 3; z++) {
+	for (int z = 0; z < NUMBER_OF_STATUSES; z++) {
 		m_pStatuses[z] = nullptr;
 	}
 }
