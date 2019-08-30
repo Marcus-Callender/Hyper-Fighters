@@ -146,22 +146,17 @@ void C_Refere::evaluate()
 	m_pFighters[0]->rest();
 	m_pFighters[1]->rest();
 
-	if (resOne > resTwo)
+	if (resOne != resTwo)
 	{
-		m_pFighters[0]->win(m_pFighters[1]->getFighterData(), m_pFighters[1]->getCurrentMove());
-		m_pFighters[1]->lose(m_pFighters[0]->getFighterData(), m_pFighters[0]->getCurrentMove());
+		int Winner = resOne > resTwo ? 0 : 1;
+		int Looser = resOne > resTwo ? 1 : 0;
+
+		m_pFighters[Winner]->win(m_pFighters[Looser]->getFighterData(), m_pFighters[Looser]->getCurrentMove());
+		m_pFighters[Looser]->lose(m_pFighters[Winner]->getFighterData(), m_pFighters[Winner]->getCurrentMove());
 
 		// giveResult is called so the AI knows the outcome of the previous turn
-		m_pFighters[0]->giveResult(AI_WIN, m_pFighters[1]->getCurrentMove()->getType());
-		m_pFighters[1]->giveResult(AI_LOSE, m_pFighters[0]->getCurrentMove()->getType());
-	}
-	else if (resTwo > resOne)
-	{
-		m_pFighters[1]->win(m_pFighters[0]->getFighterData(), m_pFighters[0]->getCurrentMove());
-		m_pFighters[0]->lose(m_pFighters[1]->getFighterData(), m_pFighters[1]->getCurrentMove());
-
-		m_pFighters[0]->giveResult(AI_LOSE, m_pFighters[1]->getCurrentMove()->getType());
-		m_pFighters[1]->giveResult(AI_WIN, m_pFighters[0]->getCurrentMove()->getType());
+		m_pFighters[Winner]->giveResult(AI_WIN, m_pFighters[Looser]->getCurrentMove()->getType());
+		m_pFighters[Looser]->giveResult(AI_LOSE, m_pFighters[Winner]->getCurrentMove()->getType());
 	}
 	else if (resTwo == resOne)
 	{
