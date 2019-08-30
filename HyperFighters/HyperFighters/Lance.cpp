@@ -80,21 +80,12 @@ void C_LanceBase::input()
 		m_charge->uncharge();
 }
 
-C_LanceData::C_LanceData() : C_FighterData::C_FighterData()
+C_LanceData::C_LanceData()
 {
 	m_name = "Lance";
 	m_hp = 110;
 
-	m_focus = 0;
-	m_knockedDown = false;
-	m_maxFocus = 100;
-
-	m_previousHP = m_hp;
-	m_previousFocus = m_focus;
-
-	for (int z = 0; z < NUMBER_OF_STATUSES; z++) {
-		m_pStatuses[z] = nullptr;
-	}
+	C_FighterData();
 }
 
 bool C_LanceData::canUseHyperSkill()

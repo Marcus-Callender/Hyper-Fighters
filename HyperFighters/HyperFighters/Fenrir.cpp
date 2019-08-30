@@ -18,16 +18,7 @@ C_FenrirData::C_FenrirData()
 {
 	m_name = "Fenrir";
 	m_hp = 100;
-
-	m_focus = 0;
-	m_knockedDown = false;
-	m_maxFocus = 100;
-
-	m_previousHP = m_hp;
-	m_previousFocus = m_focus;
-
-	for (int z = 0; z < NUMBER_OF_STATUSES; z++) {
-		m_pStatuses[z] = nullptr;
-	}
+	
+	C_FighterData();
 }
 

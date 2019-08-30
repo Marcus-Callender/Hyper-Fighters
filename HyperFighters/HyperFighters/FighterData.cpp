@@ -4,9 +4,6 @@
 
 C_FighterData::C_FighterData()
 {
-	m_name = "Terriermon";
-	m_hp = 4;
-
 	m_focus = 4;
 	m_knockedDown = false;
 	m_maxFocus = 100;

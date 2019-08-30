@@ -17,21 +17,12 @@ C_WaveBase::C_WaveBase(e_Player_Type controler) : C_FighterBase::C_FighterBase(c
 	m_pCurrentMove = m_pMoves[1];
 }
 
-C_WaveData::C_WaveData() : C_FighterData::C_FighterData()
+C_WaveData::C_WaveData()
 {
 	m_name = "Wave";
 	m_hp = 90;
 
-	m_focus = 0;
-	m_knockedDown = false;
-	m_maxFocus = 100;
-
-	m_previousHP = m_hp;
-	m_previousFocus = m_focus;
-
-	for (int z = 0; z < NUMBER_OF_STATUSES; z++) {
-		m_pStatuses[z] = nullptr;
-	}
+	C_FighterData();
 }
 
 void C_WaveData::takeDamage(int ammount, bool gainMeter)
