@@ -43,7 +43,7 @@ protected:
 
 	C_Move* m_pMoves[6];
 	C_Move* m_pCurrentMove;
-	C_Status* m_pStatuses[NUMBER_OF_STATUSES];
+	C_Status* m_pStatuses[NUMBER_OF_STATUSES]{ nullptr };
 };
 
 #endif // !__FIGHTER_BASE_H__

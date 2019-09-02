@@ -16,11 +16,6 @@ C_FighterBase::C_FighterBase(e_Player_Type controler)
 	{
 		m_pControler = new C_AI_Controler();
 	}
-
-	for (int z = 0; z < NUMBER_OF_STATUSES; z++)
-	{
-		m_pStatuses[z] = nullptr;
-	}
 }
 
 C_FighterBase::~C_FighterBase()
