@@ -15,8 +15,6 @@ class C_WaveData : public C_FighterData
 public:
 	C_WaveData();
 	~C_WaveData();
-
-	void takeDamage(int ammount, bool gainMeter = true);
 };
 
 #endif // !__WAVE_H__
