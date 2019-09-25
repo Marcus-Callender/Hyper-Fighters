@@ -40,12 +40,9 @@ void C_Refere::Start()
 
 			int roll = rand() % 6;
 
-			int roll2 = rand() % 6;
+			colours[roll] = colours[5];
 
-			while (roll == roll2)
-			{
-				roll2 = rand() % 6;
-			}
+			int roll2 = rand() % 5;
 
 			m_pFighters[0]->getFighterData()->addToName(colours[roll]);
 			m_pFighters[1]->getFighterData()->addToName(colours[roll2]);
